@@ -27,9 +27,10 @@ export default {
   /*
   ** Global CSS
   */
-  // css: [
-  //   'tachyons/css/tachyons.css'
-  // ],
+  css: [
+    '~/assets/style/main.scss'
+//    'tachyons/css/tachyons.css'
+  ],
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
@@ -57,5 +58,12 @@ export default {
   build: {},
   server: {
     host: '0.0.0.0'
-  }
+  },
+  /**
+   * Nuxt CSS Modules
+   */
+  link: [
+    {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap'},
+    {rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css'}
+  ]
 }
