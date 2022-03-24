@@ -19,9 +19,7 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <OgpCard
-          url={"https://zenn.dev/lollipop_onl/articles/mistake-promise-all"}
-        />
+        <OgpCard url={"https://topaz.dev/projects/4f42624a1a4028f63363"} />
         <p className={styles.description}>
           Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>

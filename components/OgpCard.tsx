@@ -26,30 +26,7 @@ const initialState: OgpState = {
     desc: "",
   },
 };
-const fetcher = (url: string) =>
-  fetch(url, {
-    mode: "cors",
-  })
-    .then((res) => res.text())
-    .then((text) => new DOMParser().parseFromString(text, "text/html"))
-    .then((res) => {
-      const headEls = res.head.children;
-      Array.from(headEls).map((v) => {
-        const prop = v.getAttribute("property");
-        if (!prop) return;
-        console.log(prop, v.getAttribute("content"));
-        const ogp = v.getAttribute("content");
-        return {
-          ogpData: {
-            imageUrl: ogp["og:image"],
-            siteName: ogp["og:site_name"],
-            title: ogp["og:title"],
-            desc: ogp["og:description"],
-            siteUrl: ogp["og:url"],
-          },
-        };
-      });
-    });
+
 // => {
 //   const text = res.text()
 //   const html = new DOMParser().parseFromString(text, "text/html")
@@ -95,26 +72,18 @@ const fetcher = (url: string) =>
 //   }
 
 export const OgpCard = (props: OgpDataProps) => {
-  // const [ogp, setState] = useState<OgpState>(initialState);
-  const { data, error } = useSWR(props.url, fetcher);
-  // Similar to componentDidMount and componentDidUpdate:
-
-  // fetch("https://api.example.com/items")
-  //   .then((res) => res.json())
-  //   .then(
-  //     (result) => {
-  //       setState();
-  //     },
-  //     // 補足：コンポーネント内のバグによる例外を隠蔽しないためにも
-  //     // catch()ブロックの代わりにここでエラーハンドリングすることが重要です
-  //     (error) => {
-  //       setState(initialState);
-  //     }
-  //   );
-
+  const [ogp, setState] = useState<OgpState>(initialState);
+  // const { data, error } = useSWR(props.url, fetcher, { url: props.url });
+  useEffect(() => {
+    fetch(`/api/ogp/${Buffer.from(props.url).toString("base64")}`).then((r) => {
+      r.json().then((data) => {
+        setState(data);
+      });
+    });
+  }, []);
   return (
     <div>
-      <p>You clicked {data} times</p>
+      <p>You clicked {ogp.ogpData.title} times</p>
       {/*<button onClick={() => setCount(count + 1)}>Click me</button>*/}
     </div>
   );
