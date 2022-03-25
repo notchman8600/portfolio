@@ -3,6 +3,9 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Ogp from "../components/Ogp";
 import { OgpCard } from "../components/OgpCard";
+import { SkillCard } from "../components/SkillCard";
+import { Profile } from "../components/Profile";
+import { ProfileDetail } from "../components/ProfileDetail";
 
 const Home: NextPage = () => {
   return (
@@ -16,43 +19,49 @@ const Home: NextPage = () => {
       />
 
       <main className={styles.main}>
+        {/*ページタイトル*/}
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to{" "}
+          <a href="https://twitter.com/notch_man8600" target={"_blank"}>
+            notch_man's
+          </a>{" "}
+          portfolio
         </h1>
-        <OgpCard url={"https://topaz.dev/projects/4f42624a1a4028f63363"} />
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+
+        <p className={styles.description}>自己紹介</p>
+        <Profile jaName={"三宅　健太郎"} enName={"Kentaro Miyake"} />
+        <ProfileDetail />
+        <p className={styles.description}>これまでの作品</p>
+        <div className="grid grid-cols-2 gap-8">
+          <OgpCard url={"https://topaz.dev/projects/4f42624a1a4028f63363"} />
+          <OgpCard url={"https://topaz.dev/projects/dd936bbcc01a5be88082"} />
+          <OgpCard url={"https://topaz.dev/projects/83e136f000385d10c09f"} />
+          <OgpCard url={"https://topaz.dev/projects/c00sudq23akg008ogemg"} />
+        </div>
+
+        <p className={styles.description}>スキルアセット</p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <SkillCard
+            title={"Go"}
+            desc={"ほげほげほげほげほげほげほげほげほげほげほげほげ"}
+            url={""}
+          />
+          <SkillCard
+            title={"Go"}
+            desc={"ほげほげほげほげほげほげほげほげほげほげほげほげ"}
+            url={""}
+          />
+          <SkillCard
+            title={"Go"}
+            desc={"ほげほげほげほげほげほげほげほげほげほげほげほげ"}
+            url={""}
+          />
+          <SkillCard
+            title={"Go"}
+            desc={"ほげほげほげほげほげほげほげほげほげほげほげほげ"}
+            url={""}
+          />
         </div>
       </main>
 

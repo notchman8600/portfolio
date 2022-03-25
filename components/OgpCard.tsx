@@ -27,50 +27,6 @@ const initialState: OgpState = {
   },
 };
 
-// => {
-//   const text = res.text()
-//   const html = new DOMParser().parseFromString(text, "text/html")
-//   const html = res
-//   const dom = new JSDOM(html);
-//   const meta = dom.window.document.head.querySelectorAll("meta");
-//   const ogp = extractOgp(meta);
-//   const ogpParseData = {
-//     ogpData: {
-//       imageUrl: ogp["og:image"],
-//       siteName: ogp["og:site_name"],
-//       title: ogp["og:title"],
-//       desc: ogp["og:description"],
-//       siteUrl: ogp["og:url"],
-//     },
-//   };
-// });
-
-// export async function getServerSideProps() {
-//   // `getStaticProps` はサーバー側で実行されます
-//   // Update the document title using the browser API
-//   let ogpParseData = {}
-//   await getOgpFromExternalWebsite([
-//     "https://topaz.dev/projects/4f42624a1a4028f63363",
-//   ]).then((res) => {
-//     const data = res["https://topaz.dev/projects/4f42624a1a4028f63363"];
-//     ogpParseData = {
-//       ogpData: {
-//         imageUrl: data["og:image"],
-//         siteName: data["og:site_name"],
-//         title: data["og:title"],
-//         desc: data["og:description"],
-//         siteUrl: data["og:url"],
-//       },
-//     };
-//     return {
-//       props: {
-//         fallback: {
-//           "/": ogpParseData,
-//         },
-//       },
-//     };
-//   }
-
 export const OgpCard = (props: OgpDataProps) => {
   const [ogp, setState] = useState<OgpState>(initialState);
   // const { data, error } = useSWR(props.url, fetcher, { url: props.url });
@@ -83,8 +39,20 @@ export const OgpCard = (props: OgpDataProps) => {
   }, []);
   return (
     <div>
-      <p>You clicked {ogp.ogpData.title} times</p>
-      {/*<button onClick={() => setCount(count + 1)}>Click me</button>*/}
+      <a href={props.url} target={"_blank"}>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <img
+            className="object-contain h-64 w-128"
+            src={ogp.ogpData.imageUrl}
+            alt={""}
+          />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">{ogp.ogpData.title}</div>
+            <p className="text-gray-700 text-base">{ogp.ogpData.desc}</p>
+          </div>
+        </div>
+        {/*<button onClick={() => setCount(count + 1)}>Click me</button>*/}
+      </a>
     </div>
   );
 };

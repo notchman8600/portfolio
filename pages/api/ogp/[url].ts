@@ -4,17 +4,9 @@ import { JSDOM } from "jsdom";
 
 const jsdom = new JSDOM();
 const parser = new jsdom.window.DOMParser();
-// const handler = async (
-//   req: NextApiRequest,
-//   res: NextApiResponse
-// ): Promise<void> => {
-//   const param = req.body.url;
-//   const data = await ogpFetcher(param);
-//   res.end(JSON.stringify(data));
-// };
+
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const encodedUrl = req.query.url;
-  // const param = atob(encodedUrl);
   const param = Buffer.from(encodedUrl, "base64").toString();
   console.log(encodedUrl);
   console.log(param);
