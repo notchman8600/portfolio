@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import useSWR from "swr";
 
 interface OgpDataProps {
   url: string;
@@ -39,7 +38,7 @@ export const OgpCard = (props: OgpDataProps) => {
   }, []);
   return (
     <div>
-      <a href={props.url} target={"_blank"}>
+      <a href={props.url} target={"_blank"} rel={"noopener noreferrer"}>
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
           <img
             className="object-contain h-64 w-128"

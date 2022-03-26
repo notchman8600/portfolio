@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
-            notch_man's
+            notch_man&apos;s
           </a>{" "}
           portfolio
         </h1>
