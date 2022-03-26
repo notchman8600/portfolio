@@ -7,6 +7,8 @@ const parser = new jsdom.window.DOMParser();
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const encodedUrl = req.query.url;
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const param = Buffer.from(encodedUrl, "base64").toString();
   console.log(encodedUrl);
   console.log(param);
@@ -34,6 +36,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       let url = "";
       let imageUrl = "";
       for (const obj of list) {
+        if (obj === undefined || !obj.prop || !obj.content) continue;
         switch (obj.prop) {
           case "type":
             type = obj.content;

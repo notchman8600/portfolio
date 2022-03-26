@@ -22,7 +22,11 @@ const Home: NextPage = () => {
         {/*ページタイトル*/}
         <h1 className={styles.title}>
           Welcome to{" "}
-          <a href="https://twitter.com/notch_man8600" target={"_blank"}>
+          <a
+            href="https://twitter.com/notch_man8600"
+            target={"_blank"}
+            rel={"noopener noreferrer"}
+          >
             notch_man's
           </a>{" "}
           portfolio
