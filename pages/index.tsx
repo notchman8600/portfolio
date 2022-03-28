@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         <Profile jaName={"三宅　健太郎"} enName={"Kentaro Miyake"} />
         <ProfileDetail />
         <p className={styles.description}>これまでの作品</p>
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <OgpCard url={"https://topaz.dev/projects/4f42624a1a4028f63363"} />
           <OgpCard url={"https://topaz.dev/projects/dd936bbcc01a5be88082"} />
           <OgpCard url={"https://topaz.dev/projects/83e136f000385d10c09f"} />
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
 
         <p className={styles.description}>スキルアセット</p>
 
-        <div className={styles.grid}>
+        <div className={"grid grid-cols-1 md:grid-cols-2 gap-4"}>
           <SkillCard
             title={"バックエンド"}
             desc={
@@ -66,16 +66,9 @@ const Home: NextPage = () => {
           <SkillCard
             title={"画像処理"}
             desc={
-              "C++とOpenCVまたは生データを使った画像処理プログラミングをやっています。C++版TensorflowでCNNを用いた画像認識も行なっています。" +
-              "物体追跡・動体検知などの実装が得意です。画像処理の教科書で扱われる基本的なアルゴリズムは一通りの実装経験があります。" +
-              "高専プロコンで特別賞を受賞した作品でも画像処理を使った機能の実装を行なっています。" +
-              "最近、これらのプログラムを軽量コンテナで実行出来るようになり、クラウドへのデプロイも実現しました。"
+              "C++とOpenCVまたは生データを使った画像処理プログラミングをやっています。" +
+              "物体追跡・動体検知などの実装が得意です。画像処理の教科書で扱われる基本的なアルゴリズムは一通りの実装経験があります。"
             }
-            url={""}
-          />
-          <SkillCard
-            title={"Go"}
-            desc={"ほげほげほげほげほげほげほげほげほげほげほげほげ"}
             url={""}
           />
         </div>
