@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "now-build": "cp canvas_lib64/*so.1 node_modules/canvas/build/Release/ && yarn build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint --fix --ext .ts,.js,.vue --ignore-path .gitignore ."
@@ -13,6 +14,7 @@
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^0.26.1",
     "buffer": "^6.0.3",
+    "canvas": "^2.9.1",
     "jsdom": "^19.0.0",
     "net": "^1.0.2",
     "next": "12.1.0",

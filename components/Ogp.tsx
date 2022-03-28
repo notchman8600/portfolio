@@ -23,9 +23,13 @@ const Ogp: VFC<MetaData> = ({
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle;
   const description = pageDescription ? pageDescription : defaultDescription;
   const url = pageUrl;
-  const imgUrl = pageImg;
   const imgWidth = pageWidth ? pageWidth : 1280;
   const imgHeight = pageHeight ? pageHeight : 640;
+  const baseUrl = {
+    production: "https://notchman.tech",
+    development: "http://localhost:3000",
+    test: "http://localhost:3000",
+  }[process.env.NODE_ENV];
   return (
     <Head>
       <title>{title}</title>
@@ -36,7 +40,20 @@ const Ogp: VFC<MetaData> = ({
       <meta property="og:site_name" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={imgUrl} />
+      <meta property="og:image" key="ogImage" content={`${baseUrl}/api/ogp`} />
+      <meta
+        name="twitter:card"
+        key="twitterCard"
+        content="summary_large_image"
+      />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta
+        name="twitter:image"
+        key="twitterImage"
+        content={`${baseUrl}/api/ogp`}
+      />
+
       <meta property="og:image:width" content={String(imgWidth)} />
       <meta property="og:image:height" content={String(imgHeight)} />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
