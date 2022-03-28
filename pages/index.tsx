@@ -11,9 +11,9 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Ogp
-        pageTitle={"site title"}
-        pageDescription={"site description"}
-        pageImg={"https://topaz.dev/projects/4f42624a1a4028f63363"}
+        pageTitle={"notch_manのぽーとふぉりお"}
+        pageDescription={"このサイトはnotch_man君の個人サイトです"}
+        pageImg={""}
         pageWidth={1280}
         pageHeight={960}
       />
