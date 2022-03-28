@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 
-interface ProfileDetailProps {}
+// interface ProfileDetailProps {}
 
-export const ProfileDetail = (props: ProfileDetailProps) => {
+export const ProfileDetail = () => {
   return (
     <div>
       <div className="max-w-xl rounded overflow-hidden shadow-lg p-8 text-center">

@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
-            notch_man's
+            notch_man&apos;s
           </a>{" "}
           portfolio
         </h1>
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         <Profile jaName={"三宅　健太郎"} enName={"Kentaro Miyake"} />
         <ProfileDetail />
         <p className={styles.description}>これまでの作品</p>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
           <OgpCard url={"https://topaz.dev/projects/4f42624a1a4028f63363"} />
           <OgpCard url={"https://topaz.dev/projects/dd936bbcc01a5be88082"} />
           <OgpCard url={"https://topaz.dev/projects/83e136f000385d10c09f"} />
