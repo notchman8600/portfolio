@@ -35,8 +35,9 @@ const Home: NextPage = () => {
         <p className={styles.description}>自己紹介</p>
         <Profile jaName={"三宅　健太郎"} enName={"Kentaro Miyake"} />
         <ProfileDetail />
-        <p className={styles.description}>これまでの作品</p>
+        <p className={styles.description}>これまでのハッカソンでの作品</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <OgpCard url={"https://topaz.dev/projects/50a804868af6407eb504"} />
           <OgpCard url={"https://topaz.dev/projects/4f42624a1a4028f63363"} />
           <OgpCard url={"https://topaz.dev/projects/dd936bbcc01a5be88082"} />
           <OgpCard url={"https://topaz.dev/projects/83e136f000385d10c09f"} />
