@@ -12,9 +12,13 @@ export const Profile = (props: ProfileProps) => {
       <Image
         className={"rounded-full"}
         src="/profile.jpg"
-        width={256}
-        height={256}
-        objectFit="cover"
+        width={192}
+        height={192}
+        alt={"プロフィール画像"}
+        style={{
+          objectFit: "cover",
+          aspectRatio: "1/1",
+        }}
       />
 
       <p className={"text-2xl"}>{props.jaName}</p>

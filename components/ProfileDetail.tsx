@@ -8,10 +8,10 @@ export const ProfileDetail = () => {
     <div>
       <div className="max-w-xl rounded overflow-hidden shadow-lg p-8 text-center">
         <p className={"text-gray-700 text-base"}>
-          筑波大学知識情報図書館学類3年
+          筑波大学知識情報・図書館学類に所属している何でも屋。
         </p>
         <p className={"text-gray-700 text-base"}>
-          高専時代よりコンピューターサイエンスを学ぶ。大学では知識情報学を学び、CSのみならずITに介在する人間の振るまいについても学んでいる。今年度のミッションは「情報源を通じた検索行動の分断、分類、最適化」である。{" "}
+          高専時代よりコンピューターサイエンスを学ぶ。大学ではソーシャルネットワークの将来予測と制御手法の研究に取り組んでいる。{" "}
           <a
             className={"text-sky-600"}
             href={"https://fusioncomplab.org/"}
@@ -19,7 +19,7 @@ export const ProfileDetail = () => {
           >
             融合知能デザイン研究室
           </a>
-          に所属。
+          に所属。研究室手は学術機関向けクラウドソーシングプラットフォームCrowd4Uの開発・運用等を行なっている。さらに、NextCrowd4U（仮）と呼ばれるCrowd4Uの後継システムの開発も行なっている。
         </p>
         <p>
           2021年度未踏IT人材発掘・育成事業採択。SecHack365

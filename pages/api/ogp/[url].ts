@@ -60,7 +60,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             break;
         }
       }
-      res.status(200).json({
+      res.json({
         ogpData: {
           imageUrl: imageUrl,
           siteName: site_name,
