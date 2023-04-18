@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
-import { createCanvas, loadImage } from "canvas";
+import {createCanvas, loadImage} from "@napi-rs/canvas";
 
 const createOgp = async (
   req: NextApiRequest,

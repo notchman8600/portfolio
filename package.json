@@ -11,10 +11,10 @@
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.40",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^0.27.2",
     "buffer": "^6.0.3",
-    "canvas": "^2.11.2",
     "jsdom": "^21.1.1",
     "net": "^1.0.2",
     "next": "13.3.0",
