@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
-import { createCanvas, loadImage } from "canvas";
+import {createCanvas, loadImage} from "@napi-rs/canvas";
 
 const createOgp = async (
   req: NextApiRequest,
@@ -26,7 +26,7 @@ const createOgp = async (
   ctx.textBaseline = "middle";
   // ctx.fillText("わしはOGP画像を生成したい！！！！！", 600, 300);
 
-  const buffer = canvas.toBuffer();
+  const buffer = canvas.toBuffer("image/webp");
 
   res.writeHead(200, {
     "Content-Type": "image/png",
