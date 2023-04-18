@@ -15,7 +15,7 @@ export const Profile = (props: ProfileProps) => {
         width={256}
         height={256}
         objectFit="cover"
-      />
+       alt={"notch_manのアイコン"}/>
 
       <p className={"text-2xl"}>{props.jaName}</p>
       <p className={"text-lg"}>
