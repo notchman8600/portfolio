@@ -10,6 +10,9 @@
     "lint:fix": "eslint --fix --ext .ts,.js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@linaria/babel-preset": "^4.4.5",
+    "@linaria/core": "^4.2.10",
+    "@linaria/react": "^4.3.8",
     "@napi-rs/canvas": "^0.1.40",
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^0.27.2",
@@ -17,6 +20,7 @@
     "jsdom": "^21.0.0",
     "net": "^1.0.2",
     "next": "13.3.0",
+    "next-with-linaria": "^0.5.0",
     "node-fetch": "^3.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -27,6 +31,8 @@
     "tls": "^0.0.1"
   },
   "devDependencies": {
+    "@linaria/stylelint-config-standard-linaria": "^4.1.5",
+    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@types/jsdom": "^21.1.1",
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
@@ -38,8 +44,12 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.1",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.24",
     "prettier": "^2.8.3",
+    "stylelint": "^15.6.2",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^3.0.0",
     "tailwindcss": "^3.2.4",
     "typescript": "4.9.4"
   }
