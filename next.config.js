@@ -1,12 +1,14 @@
-const withLinaria = require('next-with-linaria');
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, experimental: {
-    appDir: true,
-  }, images: {
-    remotePatterns: [{
-      protocol: "https", hostname: "**",
-    },],
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
 };
 
-module.exports = withLinaria(nextConfig);
+module.exports = nextConfig;
