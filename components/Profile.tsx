@@ -36,21 +36,17 @@ export const Profile = (props: ProfileProps) => {
   );
 };
 
-const ProfileBox = styled.div`
-  text-align: center;
+const ProfileBox = styled.div`  text-align: center;
 `;
 
-const NameBox = styled.p`
-  font-size: 1.5rem;
+const NameBox = styled.p`  font-size: 1.5rem;
   line-height: 2rem;
 `;
 
-const SummaryBox = styled.p`
-  font-size: 1rem;
+const SummaryBox = styled.p`  font-size: 1rem;
   line-height: 1.5rem;
 `
-const LinkText = styled.a`
-  --tw-text-opacity: 1;
-  color: rgba(96, 165, 250, var(--tw-text-opacity));
+const LinkText = styled.a`  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
   text-decoration: none;
 `;

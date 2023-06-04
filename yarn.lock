@@ -4606,7 +4606,7 @@ stylelint@^14.11.0:
     v8-compile-cache "^2.3.0"
     write-file-atomic "^4.0.2"
 
-stylelint@^15.6.2:
+stylelint@^15.6.3:
   version "15.6.3"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-15.6.3.tgz#8e24d3eef6b4c2ec0d8e5a41abeca3938281a1ff"
   integrity sha512-qWUfFsnPyrgK8NMFvGkjUrF1+DNrS5VMoN39meJbeQcOW8NE3pxIwTpA35m0MG6lmZobs7GVoQUdELmzqdO7XQ==

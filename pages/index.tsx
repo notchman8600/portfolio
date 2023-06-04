@@ -86,10 +86,9 @@ const Home: NextPage = () => {
 
 export default Home;
 
-const GridBox = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+const GridBox = styled.div`  display: grid;
   gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));

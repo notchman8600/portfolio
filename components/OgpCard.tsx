@@ -68,24 +68,20 @@ export const OgpCard = (props: OgpDataProps) => {
 };
 
 
-const RoundImageBox = styled.div`
-  border-radius: 0.25rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+const RoundImageBox = styled.div`  border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
 `
-const ContentDesc = styled.div`
-  padding: 16px 6px;
+const ContentDesc = styled.div`  padding: 16px 6px;
 `
 
-const ContentTitleBox = styled.div`
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+const ContentTitleBox = styled.div`  font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1.75rem;
   margin-bottom: 0.5rem;
 `
 
-const ContentDetailDesc = styled.p`
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
+const ContentDetailDesc = styled.p`  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
   font-size: 1rem;
   line-height: 1.5rem;
   overflow: hidden;
