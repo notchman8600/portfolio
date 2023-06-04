@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
+const withLinaria = require('next-with-linaria');
+
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -11,4 +16,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withLinaria(nextConfig);

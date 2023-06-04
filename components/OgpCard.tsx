@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Image from "next/image";
+import {styled} from "@linaria/react";
 
 interface OgpDataProps {
   url: string;
@@ -39,33 +40,51 @@ export const OgpCard = (props: OgpDataProps) => {
   }, []);
   return (
     <div>
-      <a href={props.url} target={"_blank"} rel={"noopener noreferrer"}>
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          {/*<img*/}
-          {/*  className="object-contain h-64 w-128"*/}
-          {/*  src={ogp.ogpData.imageUrl}*/}
-          {/*  alt={""}*/}
-          {/*/>*/}
+      <a href={props.url} target={"_blank"} rel={"noopener noreferrer"} style={{textDecoration:"none"}}>
+        <RoundImageBox>
           <Image
-            className={"object-contain"}
             src={ogp.ogpData.imageUrl}
-            width={512}
-            height={384}
+            width={544}
+            height={306}
             alt={"OGP画像"}
             style={{
               objectFit: "cover",
               aspectRatio: "16/9",
+              maxWidth: '100%',
+              height: 'auto',
             }}
           ></Image>
-          <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{ogp.ogpData.title}</div>
-            <p className="text-gray-700 text-base truncate">
+          <ContentDesc>
+            <ContentTitleBox>{ogp.ogpData.title}</ContentTitleBox>
+            <ContentDetailDesc>
               {ogp.ogpData.desc}
-            </p>
-          </div>
-        </div>
+            </ContentDetailDesc>
+          </ContentDesc>
+        </RoundImageBox>
         {/*<button onClick={() => setCount(count + 1)}>Click me</button>*/}
       </a>
     </div>
   );
 };
+
+
+const RoundImageBox = styled.div`  border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+`
+const ContentDesc = styled.div`  padding: 16px 6px;
+`
+
+const ContentTitleBox = styled.div`  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  margin-bottom: 0.5rem;
+`
+
+const ContentDetailDesc = styled.p`  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+  font-size: 1rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`
