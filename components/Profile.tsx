@@ -31,22 +31,29 @@ export const Profile = (props: ProfileProps) => {
           {props.enName}
         </LinkText>
       </SummaryBox>
-      <p>1999.8.15</p>
+
+      <SummaryBox>1999.8.15</SummaryBox>
     </ProfileBox>
   );
 };
 
-const ProfileBox = styled.div`  text-align: center;
+const ProfileBox = styled.div`
+  text-align: center;
 `;
 
-const NameBox = styled.p`  font-size: 1.5rem;
+const NameBox = styled.p`
+  font-size: 1.5rem;
   line-height: 2rem;
+  margin: 0.25rem 0;
 `;
 
-const SummaryBox = styled.p`  font-size: 1rem;
+const SummaryBox = styled.p`
+  font-size: 1rem;
   line-height: 1.5rem;
+  margin: 0.25rem 0;
 `
-const LinkText = styled.a`  --tw-text-opacity: 1;
+const LinkText = styled.a`
+  --tw-text-opacity: 1;
   color: rgb(96 165 250 / var(--tw-text-opacity));
   text-decoration: none;
 `;
