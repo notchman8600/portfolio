@@ -43,14 +43,15 @@ export const OgpCard = (props: OgpDataProps) => {
       <a href={props.url} target={"_blank"} rel={"noopener noreferrer"}>
         <RoundImageBox>
           <Image
-            className={"object-contain"}
             src={ogp.ogpData.imageUrl}
-            width={512}
-            height={384}
+            width={544}
+            height={306}
             alt={"OGP画像"}
             style={{
               objectFit: "cover",
               aspectRatio: "16/9",
+              maxWidth: '100%',
+              height: 'auto',
             }}
           ></Image>
           <ContentDesc>
@@ -68,7 +69,6 @@ export const OgpCard = (props: OgpDataProps) => {
 
 
 const RoundImageBox = styled.div`
-  max-width: 96%;
   border-radius: 0.25rem;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 `
