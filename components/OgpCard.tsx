@@ -40,7 +40,7 @@ export const OgpCard = (props: OgpDataProps) => {
   }, []);
   return (
     <div>
-      <a href={props.url} target={"_blank"} rel={"noopener noreferrer"}>
+      <a href={props.url} target={"_blank"} rel={"noopener noreferrer"} style={{textDecoration:"none"}}>
         <RoundImageBox>
           <Image
             src={ogp.ogpData.imageUrl}

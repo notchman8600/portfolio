@@ -50,4 +50,5 @@ const ProfileText = styled.p`
 const LinkText = styled.a`
   --tw-text-opacity: 1;
   color: rgba(96, 165, 250, var(--tw-text-opacity));
+  text-decoration: none;
 `;
