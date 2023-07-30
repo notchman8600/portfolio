@@ -30,9 +30,14 @@ export const Profile = (props: ProfileProps) => {
           {" "}
           {props.enName}
         </LinkText>
-      </SummaryBox>
 
+      </SummaryBox>
       <SummaryBox>1999.8.15</SummaryBox>
+      <LinkText
+        href={"https://github.com/notchman8600/resume"}
+      >
+        {"職務経歴書はこちらから"}
+      </LinkText>
     </ProfileBox>
   );
 };
