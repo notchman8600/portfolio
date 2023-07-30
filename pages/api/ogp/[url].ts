@@ -1,7 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import fetch from "node-fetch";
-import { JSDOM } from "jsdom";
+/* eslint-disable */
 
+import type {NextApiRequest, NextApiResponse} from "next";
+import fetch from "node-fetch";
+import {JSDOM} from "jsdom";
 const jsdom = new JSDOM();
 const parser = new jsdom.window.DOMParser();
 
@@ -10,8 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const param = Buffer.from(encodedUrl, "base64").toString();
-  console.log(encodedUrl);
-  console.log(param);
+
   fetch(param)
     .then((res) => res.text())
     .then((text) => parser.parseFromString(text, "text/html"))

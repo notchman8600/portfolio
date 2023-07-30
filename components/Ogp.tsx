@@ -14,7 +14,6 @@ const Ogp: VFC<MetaData> = ({
   pageTitle,
   pageDescription,
   pageUrl,
-  pageImg,
   pageWidth,
   pageHeight,
 }) => {
