@@ -1,6 +1,6 @@
+import { styled } from "@linaria/react";
 import React from "react";
-import {styled} from "@linaria/react";
-import {SkillCard, SkillCardWithLink} from "@/components/SkillCard";
+import { SkillCard, SkillCardWithLink } from "@/components/SkillCard";
 
 interface SkillCardProps {
   title: string;
@@ -8,30 +8,36 @@ interface SkillCardProps {
   url: string;
 }
 
-
-export const SkillCardsWithLink = ({props}:any) => {
+export const SkillCardsWithLink = ({ props }: any) => {
   return (
     <div>
       <GridContainerStyle>
-        {
-          props.map((value, index) => (
-
-            <SkillCardWithLink key={index} title={value.title} desc={value.desc} url={value.url}></SkillCardWithLink>
-          ))
-        }
+        {props.map((value, index) => (
+          <SkillCardWithLink
+            key={index}
+            title={value.title}
+            desc={value.desc}
+            url={value.url}
+          ></SkillCardWithLink>
+        ))}
       </GridContainerStyle>
     </div>
   );
 };
-export const SkillCards = ({props}:any) => {
+export const SkillCards = ({ props }: any) => {
   return (
     <div>
       <GridContainerStyle>
-        {
-          props.map((value, index) => (
-            <div><SkillCard key={index} title={value.title} desc={value.desc} url={value.url}></SkillCard></div>
-          ))
-        }
+        {props.map((value, index) => (
+          <div>
+            <SkillCard
+              key={index}
+              title={value.title}
+              desc={value.desc}
+              url={value.url}
+            ></SkillCard>
+          </div>
+        ))}
       </GridContainerStyle>
     </div>
   );

@@ -1,14 +1,13 @@
+import { styled } from "@linaria/react";
 import React from "react";
-import {styled} from "@linaria/react";
-
 
 export const ProfileDetail = () => {
   return (
     <div>
       <ProfileDetailBox>
         <ProfileText>
-          筑波大学知識情報・図書館学類に所属している何でも屋。
-          高専時代よりコンピューターサイエンスを学ぶ。大学ではソーシャルネットワークの将来予測と制御手法の研究に取り組んでいる。
+          「のっちまん」として活動するフルスタックエンジニア。
+          筑波大学知識情報・図書館学類に所属し、高専時代からコンピューターサイエンスを学んでいます。
           現在は
           <LinkText
             href={"https://fusioncomplab.org/"}
@@ -16,11 +15,12 @@ export const ProfileDetail = () => {
           >
             融合知能デザイン研究室
           </LinkText>
-          に所属。研究室手は学術機関向けクラウドソーシングプラットフォームCrowd4Uの開発・運用等を行なっている。さらに、NextCrowd4U（仮）と呼ばれるCrowd4Uの後継システムの開発も行なっている。
+          に所属し、学術機関向けクラウドソーシングプラットフォームCrowd4Uの開発・運用を手がけています。
         </ProfileText>
         <ProfileText>
-          2021年度未踏IT人材発掘・育成事業採択。SecHack365 表現駆動コース修了、procon30自由部門特別賞などの受賞歴有。
-          また、インターンシップやアルバイトでフロントエンドからバックエンドまで幅広く開発を手がけている。
+          2021年度未踏IT人材発掘・育成事業採択、SecHack365
+          表現駆動コース修了、procon30自由部門特別賞などの受賞歴があります。
+          インターンシップや業務委託でフロントエンドからバックエンドまで幅広く開発を手がけており、現在も新規案件を募集中です。
         </ProfileText>
       </ProfileDetailBox>
     </div>
@@ -34,7 +34,8 @@ export const WorksDetail = () => {
           これまで複数のハッカソンに参加し優勝経験もあります。ハッカソンではReactやGo、Pythonのスキルアップを目的に出場しており様々な技術的な知見を蓄積しています。
         </ProfileText>
         <ProfileText>
-          また2021年度未踏IT人材発掘・育成事業採択やSecHack365 表現駆動コース修了、procon30で自由部門特別賞などの受賞するなど様々な実績があります。
+          また2021年度未踏IT人材発掘・育成事業採択やSecHack365
+          表現駆動コース修了、procon30で自由部門特別賞などの受賞するなど様々な実績があります。
         </ProfileText>
       </ProfileDetailBox>
     </div>
@@ -56,7 +57,6 @@ const ProfileText = styled.p`
   text-align: left;
   --tw-text-opacity: 1;
 `;
-
 
 const LinkText = styled.a`
   --tw-text-opacity: 1;

@@ -6,21 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "eslint --fix --ext .ts,.js,.vue --ignore-path .gitignore .",
-    "stylelint": "stylelint --fix \"**/*.{js,jsx,ts,tsx}\""
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
   },
   "dependencies": {
     "@linaria/babel-preset": "^4.5.4",
     "@linaria/core": "^4.5.4",
     "@linaria/react": "^4.5.4",
-    "@napi-rs/canvas": "^0.1.41",
     "@reduxjs/toolkit": "^1.9.5",
-    "axios": "^1.4.0",
+    "axios": "^1.11.0",
     "buffer": "^6.0.3",
     "jsdom": "^22.1.0",
     "net": "^1.0.2",
-    "next": "13.4",
+    "next": "14.2.30",
     "next-with-linaria": "^0.5.1",
     "node-fetch": "^3.3.2",
     "react": "18.2",
@@ -32,26 +31,13 @@
     "tls": "^0.0.1"
   },
   "devDependencies": {
-    "@linaria/stylelint-config-standard-linaria": "^4.5.1",
-    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@biomejs/biome": "^2.1.2",
     "@types/jsdom": "^21.1.1",
-    "@types/node": "20.4",
-    "@types/react": "18.2",
-    "@typescript-eslint/eslint-plugin": "^6.2.0",
-    "@typescript-eslint/parser": "^6.2.0",
+    "@types/node": "20.16",
+    "@types/react": "18.3",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.46.0",
-    "eslint-config-next": "13.4",
-    "eslint-config-prettier": "^8.9.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react": "^7.33.1",
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
-    "stylelint": "^15.10.2",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-order": "^6.0.3",
-    "stylelint-prettier": "^4.0.2",
-    "typescript": "5.1.6"
+    "postcss": "^8.5.6",
+    "typescript": "5.5.4"
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "pnpm@9.15.1"
 }

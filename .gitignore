@@ -38,3 +38,4 @@ yarn-error.log*
 *.tsbuildinfo
 .yarn/cache/
 .yarn/install-state.gz
+.claude/
