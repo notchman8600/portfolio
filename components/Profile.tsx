@@ -1,6 +1,6 @@
-import React from "react";
+import { styled } from "@linaria/react";
 import Image from "next/image";
-import {styled} from "@linaria/react";
+import React from "react";
 
 interface ProfileProps {
   jaName: string;
@@ -12,8 +12,8 @@ export const Profile = (props: ProfileProps) => {
     <ProfileBox>
       <Image
         src="/profile.jpg"
-        width={192}
-        height={192}
+        width={256}
+        height={256}
         alt={"プロフィール画像"}
         style={{
           objectFit: "cover",
@@ -24,18 +24,13 @@ export const Profile = (props: ProfileProps) => {
 
       <NameBox>{props.jaName}</NameBox>
       <SummaryBox>
-        <LinkText
-          href={"https://www.wantedly.com/id/notchman8600"}
-        >
+        <LinkText href={"https://www.wantedly.com/id/notchman8600"}>
           {" "}
           {props.enName}
         </LinkText>
-
       </SummaryBox>
       <SummaryBox>1999.8.15</SummaryBox>
-      <LinkText
-        href={"https://github.com/notchman8600/resume"}
-      >
+      <LinkText href={"https://github.com/notchman8600/resume"}>
         {"職務経歴書はこちらから"}
       </LinkText>
     </ProfileBox>
@@ -56,7 +51,7 @@ const SummaryBox = styled.p`
   font-size: 1rem;
   line-height: 1.5rem;
   margin: 0.25rem 0;
-`
+`;
 const LinkText = styled.a`
   --tw-text-opacity: 1;
   color: rgb(96 165 250 / var(--tw-text-opacity));
