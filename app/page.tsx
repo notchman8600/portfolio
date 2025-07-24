@@ -7,13 +7,13 @@ import { SkillCardsWithLink } from "@/containers/SkillCards";
 import styles from "../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア",
+  title: "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア",
   description:
-    "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。案件のご依頼を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
+    "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。案件のご依頼を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
   openGraph: {
-    title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア",
+    title: "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア",
     description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。案件のご依頼を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。案件のご依頼を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
     images: [
       {
         url: "https://notchman.tech/profile.jpg",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア",
+    title: "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア",
     description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。",
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。",
     images: ["https://notchman.tech/profile.jpg"],
   },
   alternates: {
@@ -63,7 +63,7 @@ export default function Home() {
         />
         <ProfileDetail />
         <p className={styles.description}>
-          現在、新規案件を募集中です！お気軽にお問い合わせください。
+          現在、新規案件を募集中です！お気軽に<a href="/contact">お問い合わせください</a>。
         </p>
         <h2 className={styles.skillsTitle}>提供できるサービス・スキル</h2>
         <SkillCardsWithLink

@@ -272,3 +272,13 @@
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
+.description a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.description a:hover {
+  color: #0051cc;
+  text-decoration: underline;
+}

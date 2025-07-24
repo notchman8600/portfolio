@@ -4,9 +4,9 @@ import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title:
-    "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア | 開発案件・技術コンサル・研修承ります",
+    "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア | 開発案件・技術コンサル・研修承ります",
   description:
-    "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。開発案件・受託開発・技術コンサル・技術研修を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。お気軽にお問い合わせください。",
+    "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。開発案件・受託開発・技術コンサル・技術研修を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。お気軽にお問い合わせください。",
   authors: [{ name: "のっちまん (Kentaro Miyake)" }],
   keywords: [
     "のっちまん",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア | 開発案件・技術コンサル・研修承ります",
+      "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア | 開発案件・技術コンサル・研修承ります",
     description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。開発案件・技術コンサル・技術研修を承っております。",
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。開発案件・技術コンサル・技術研修を承っております。",
     images: [
       {
         url: "https://notchman.tech/profile.jpg",
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     site: "@notchman8600",
     creator: "@notchman8600",
     title:
-      "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア | 開発案件・技術コンサル・研修承ります",
+      "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア | 開発案件・技術コンサル・研修承ります",
     description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。開発案件・技術コンサル・技術研修を承っております。",
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。開発案件・技術コンサル・技術研修を承っております。",
     images: ["https://notchman.tech/profile.jpg"],
   },
   metadataBase: new URL("https://notchman.tech"),
@@ -73,7 +73,7 @@ const jsonLd = [
     alternateName: "notch_man's portfolio",
     url: "https://notchman.tech",
     description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。",
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。",
     author: {
       "@type": "Person",
       name: "のっちまん (三宅 健太郎)",
@@ -87,13 +87,13 @@ const jsonLd = [
     name: "のっちまん (三宅 健太郎)",
     alternateName: ["notch_man", "Kentaro Miyake"],
     url: "https://notchman.tech",
-    jobTitle: "フルスタックエンジニア",
+    jobTitle: "全方位型エンジニア",
     worksFor: {
       "@type": "Organization",
       name: "フリーランス",
     },
     description:
-      "フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニア。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
+      "フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニア。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
     sameAs: [
       "https://twitter.com/notchman8600",
       "https://www.facebook.com/nct15317",

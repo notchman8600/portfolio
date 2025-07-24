@@ -25,7 +25,7 @@ export const Footer = () => {
         </ul>
       </div>
       <div className={styles.footerInfo}>
-        <p>のっちまん(notch_man) - フルスタックエンジニア</p>
+        <p>のっちまん(notch_man) - 全方位型エンジニア</p>
         <p>開発案件・技術コンサル・研修のご依頼を承っております</p>
         <p>Authored by notch_man, Powered by Next.js</p>
       </div>

@@ -9,13 +9,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     name: "のっちまん (三宅 健太郎)",
     alternateName: ["notch_man", "Kentaro Miyake"],
     url: "https://notchman.tech",
-    jobTitle: "フルスタックエンジニア",
+    jobTitle: "全方位型エンジニア",
     worksFor: {
       "@type": "Organization",
       name: "フリーランス",
     },
     description:
-      "フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニア。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
+      "フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニア。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
     sameAs: [
       "https://twitter.com/notchman8600",
       "https://www.facebook.com/nct15317",
