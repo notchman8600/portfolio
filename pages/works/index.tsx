@@ -29,48 +29,50 @@ const Home: NextPage = () => {
           <OgpCardLocal
             url={"https://topaz.dev/projects/3cb8f7e2be54f7083f99"}
             imageUrl={"/assets/works/project-3cb8f7e2be54f7083f99.jpg"}
-            title={"Web of Thing ワークショップ 連動IoTアプリ開発"}
+            title={"masakari exhibition"}
             desc={
-              "日本における、ウェブ技術を活用したIoTアプリケーション開発推進のためのワークショップ資材の整備と、連動IoTアプリケーションの開発"
+              "ハッカソンの発表（進捗）をするために過去作品の展示会場を作った↓！"
             }
           />
           <OgpCardLocal
             url={"https://topaz.dev/projects/50a804868af6407eb504"}
             imageUrl={"/assets/works/project-50a804868af6407eb504.jpg"}
-            title={"Yorimatome"}
+            title={"デスマTV"}
             desc={
-              "社会人、大学生の限られた時間で楽しく本を読むための読書習慣化ツール"
+              "デスマTVで怖しのエンジニアのデスマーチを配信しよう！"
             }
           />
           <OgpCardLocal
             url={"https://topaz.dev/projects/4f42624a1a4028f63363"}
             imageUrl={"/assets/works/project-4f42624a1a4028f63363.jpg"}
-            title={"ReCOLLECTion"}
+            title={"奇声を発してハッピーハッピー"}
             desc={
-              "昔持っていたモノを簡単に再発見・買い換えができるアプリケーション"
+              "奇声を発声してアプリの島田紳を下げよう。"
             }
           />
           <OgpCardLocal
             url={"https://topaz.dev/projects/dd936bbcc01a5be88082"}
             imageUrl={"/assets/works/project-dd936bbcc01a5be88082.jpg"}
-            title={
-              "自分と向き合うセルフカウンセリングサービス ポンコツAIとの対話"
-            }
+            title={"Cheese!"}
             desc={
-              "チャットボットによる自分と向き合うセルフカウンセリングサービス"
+              "オンラインでも皆で集合写真！"
             }
           />
           <OgpCardLocal
             url={"https://topaz.dev/projects/83e136f000385d10c09f"}
             imageUrl={"/assets/works/project-83e136f000385d10c09f.jpg"}
-            title={"Smafobook"}
-            desc={"本をスマホでスキャンして管理する新しい読書体験"}
+            title={"無職にメイドに夏を地だたかった"}
+            desc={
+              "おかえりなさいませ！ご主人様、お嬢様♡"
+            }
           />
           <OgpCardLocal
             url={"https://topaz.dev/projects/c00sudq23akg008ogemg"}
             imageUrl={"/assets/works/project-c00sudq23akg008ogemg.jpg"}
-            title={"Web Recorder"}
-            desc={"ウェブブラウザでとにかく簡単に録画・配信ができるツール"}
+            title={"Kubesmas tree"}
+            desc={
+              "もうすぐクリスマス！みんなでクリスマス！"
+            }
           />
         </GridBox>
         <p className={styles.description}>
