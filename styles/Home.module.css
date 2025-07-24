@@ -129,6 +129,14 @@
     width: 100%;
     flex-direction: column;
   }
+  
+  .skillsTitle {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
 }
 
 .header {
@@ -143,4 +151,34 @@
   display: inline-block;
   padding: 8px 24px;
   font-size: 1.2rem;
+}
+
+.skillsTitle {
+  font-size: 2.5rem;
+  margin: 3rem 0 2rem 0;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.skillsTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #0070f3;
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin: 2.5rem 0 1.5rem 0;
+  text-align: center;
+  font-weight: 600;
+  color: #444;
 }
