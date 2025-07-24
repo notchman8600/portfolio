@@ -3,9 +3,9 @@ import Script from "next/script";
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア",
+  title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア | 開発案件・技術コンサル・研修承ります",
   description:
-    "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。案件のご依頼を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
+    "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。開発案件・受託開発・技術コンサル・技術研修を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。お気軽にお問い合わせください。",
   authors: [{ name: "のっちまん (Kentaro Miyake)" }],
   keywords: [
     "のっちまん",
@@ -18,14 +18,22 @@ export const metadata: Metadata = {
     "開発",
     "案件",
     "フリーランス",
+    "開発案件",
+    "受託開発",
+    "技術コンサル",
+    "技術研修",
+    "スクラムマスター",
+    "アジャイル開発",
+    "Web開発",
+    "システム開発",
   ],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア",
+    title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア | 開発案件・技術コンサル・研修承ります",
     description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。",
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。開発案件・技術コンサル・技術研修を承っております。",
     images: [
       {
         url: "https://notchman.tech/profile.jpg",
@@ -43,9 +51,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@notchman8600",
     creator: "@notchman8600",
-    title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア",
+    title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア | 開発案件・技術コンサル・研修承ります",
     description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。",
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。開発案件・技術コンサル・技術研修を承っております。",
     images: ["https://notchman.tech/profile.jpg"],
   },
   metadataBase: new URL("https://notchman.tech"),

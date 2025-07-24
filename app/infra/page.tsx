@@ -4,11 +4,28 @@ import { SkillCards } from "@/containers/SkillCards";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "インフラ構築・運用 | のっちまん(notch_man)のポートフォリオ",
+  title: "インフラ構築・運用・AWS移行 | のっちまん(notch_man) | クラウド・コンテナ・サーバーレス",
   description:
-    "Docker、Kubernetes、AWSを活用したインフラ構築・運用をサポート。CI/CDパイプラインの構築から、高負荷環境の運用まで幅広く対応します。",
+    "Docker、Kubernetes、AWSを活用したインフラ構築・運用・クラウド移行をサポート。オンプレからAWSへの移行、CI/CDパイプラインの構築、サーバーレスアーキテクチャ、高負荷環境の運用まで幅広く対応します。開発案件としてお気軽にお問い合わせください。",
+  keywords: [
+    "インフラ構築",
+    "インフラ運用",
+    "AWS",
+    "AWS移行",
+    "クラウド移行",
+    "Docker",
+    "Kubernetes",
+    "サーバーレス",
+    "Lambda",
+    "EC2",
+    "ECS",
+    "CI/CD",
+    "Infrastructure as Code",
+    "Terraform",
+    "開発案件",
+  ],
   openGraph: {
-    title: "インフラ構築・運用 | のっちまん(notch_man)のポートフォリオ",
+    title: "インフラ構築・運用・AWS移行 | のっちまん(notch_man) | クラウド・コンテナ・サーバーレス",
     description:
       "Docker、Kubernetes、AWSを活用したインフラ構築・運用をサポート。CI/CDパイプラインの構築から、高負荷環境の運用まで幅広く対応します。",
   },

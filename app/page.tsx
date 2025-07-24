@@ -3,6 +3,7 @@ import { Profile } from "@/components/Profile";
 import { ProfileDetail } from "@/components/ProfileDetail";
 import { Header } from "@/containers/Header";
 import { SkillCardsWithLink } from "@/containers/SkillCards";
+import { Footer } from "@/components/Footer";
 import styles from "../styles/Home.module.css";
 
 export const metadata: Metadata = {
@@ -110,9 +111,7 @@ export default function Home() {
         ></SkillCardsWithLink>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }
