@@ -16,12 +16,14 @@ export const Profile = (props: ProfileProps) => {
         src="/profile.jpg"
         width={256}
         height={256}
-        alt={"プロフィール画像"}
+        alt="のっちまん(三宅健太郎)のプロフィール写真"
         style={{
           objectFit: "cover",
           aspectRatio: "1/1",
           borderRadius: "9999px",
         }}
+        priority
+        quality={85}
       />
 
       <NameBox>{props.jaName}</NameBox>
