@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -6,7 +6,10 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="author" content="のっちまん (Kentaro Miyake)" />
-        <meta name="keywords" content="のっちまん,notch_man,三宅健太郎,Kentaro Miyake,フロントエンド,バックエンド,エンジニア,開発,案件,フリーランス" />
+        <meta
+          name="keywords"
+          content="のっちまん,notch_man,三宅健太郎,Kentaro Miyake,フロントエンド,バックエンド,エンジニア,開発,案件,フリーランス"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
@@ -14,5 +17,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

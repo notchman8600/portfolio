@@ -1,39 +1,51 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Script from 'next/script'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "のっちまん (三宅 健太郎)",
-    "alternateName": ["notch_man", "Kentaro Miyake"],
-    "url": "https://notchman.tech",
-    "jobTitle": "フルスタックエンジニア",
-    "worksFor": {
+    name: "のっちまん (三宅 健太郎)",
+    alternateName: ["notch_man", "Kentaro Miyake"],
+    url: "https://notchman.tech",
+    jobTitle: "フルスタックエンジニア",
+    worksFor: {
       "@type": "Organization",
-      "name": "フリーランス"
+      name: "フリーランス",
     },
-    "description": "フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニア。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
-    "sameAs": [
+    description:
+      "フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニア。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
+    sameAs: [
       "https://twitter.com/notchman8600",
-      "https://www.facebook.com/nct15317"
+      "https://www.facebook.com/nct15317",
     ],
-    "knowsAbout": [
-      "React", "Next.js", "TypeScript", "JavaScript",
-      "Go", "Python", "PHP", "Ruby",
-      "AWS", "Docker", "Kubernetes",
-      "フロントエンド開発", "バックエンド開発", "インフラ構築"
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Go",
+      "Python",
+      "PHP",
+      "Ruby",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "フロントエンド開発",
+      "バックエンド開発",
+      "インフラ構築",
     ],
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "itemOffered": {
+      itemOffered: {
         "@type": "Service",
-        "name": "ソフトウェア開発サービス",
-        "description": "Webアプリケーション開発、APIサーバー開発、インフラ構築など"
-      }
-    }
-  }
+        name: "ソフトウェア開発サービス",
+        description:
+          "Webアプリケーション開発、APIサーバー開発、インフラ構築など",
+      },
+    },
+  };
 
   return (
     <>
@@ -41,13 +53,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         id="json-ld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd)
+          __html: JSON.stringify(jsonLd),
         }}
         strategy="afterInteractive"
       />
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

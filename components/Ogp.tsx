@@ -1,5 +1,5 @@
-import { VFC } from "react";
 import Head from "next/head";
+import type { VFC } from "react";
 
 interface MetaData {
   pageTitle?: string;

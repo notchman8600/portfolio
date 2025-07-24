@@ -11,5 +11,5 @@ export const HeaderItem = (props: Props) => {
     <Link href={props.url} className={styles.anchor}>
       {props.name}
     </Link>
-  )
-}
+  );
+};
