@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Header } from "@/containers/Header";
-import { SkillCards } from "@/containers/SkillCards";
 import { Footer } from "@/components/Footer";
 import {
-  createServiceJsonLd,
   createBreadcrumbJsonLd,
+  createServiceJsonLd,
 } from "@/components/jsonLd";
+import { Header } from "@/containers/Header";
+import { SkillCards } from "@/containers/SkillCards";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {

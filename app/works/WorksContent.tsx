@@ -1,8 +1,8 @@
 import { styled } from "@linaria/react";
+import { Footer } from "@/components/Footer";
 import { OgpCardLocal } from "@/components/OgpCardLocal";
 import { WorksDetail } from "@/components/ProfileDetail";
 import { Header } from "@/containers/Header";
-import { Footer } from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
 
 export default function WorksContent() {

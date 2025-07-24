@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
-import { Footer } from "@/components/Footer";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
