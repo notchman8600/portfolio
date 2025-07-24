@@ -1,16 +1,42 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { Footer } from "@/components/Footer";
+import {
+  createBreadcrumbJsonLd,
+  createServiceJsonLd,
+} from "@/components/jsonLd";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "Web開発 | のっちまん(notch_man)のポートフォリオ",
+  title:
+    "Web開発・受託開発・開発案件 | のっちまん(notch_man) | フロントエンド・バックエンド・フルスタック開発",
   description:
-    "フロントエンドからバックエンドまで一貫したWebサービス開発が可能です。React, Next.js, Vue.js, Go, Python, PHP, Ruby on Rails, Laravelなど幅広い技術スタックで対応します。",
+    "フロントエンドからバックエンドまで一貫したWebサービス開発・受託開発を承っております。React, Next.js, Vue.js, TypeScript, Go, Python, PHP, Ruby on Rails, Laravelなど幅広い技術スタックで開発案件に対応します。マイクロサービス開発・API開発・パフォーマンス最適化などお気軽にお問い合わせください。",
+  keywords: [
+    "Web開発",
+    "受託開発",
+    "開発案件",
+    "フロントエンド開発",
+    "バックエンド開発",
+    "フルスタック開発",
+    "React",
+    "Next.js",
+    "Vue.js",
+    "TypeScript",
+    "Go",
+    "Python",
+    "Rails",
+    "Laravel",
+    "API開発",
+    "マイクロサービス",
+  ],
   openGraph: {
-    title: "Web開発 | のっちまん(notch_man)のポートフォリオ",
+    title:
+      "Web開発・受託開発・開発案件 | のっちまん(notch_man) | フロントエンド・バックエンド・フルスタック開発",
     description:
-      "フロントエンドからバックエンドまで一貫したWebサービス開発が可能です。React, Next.js, Vue.js, Go, Python, PHP, Ruby on Rails, Laravelなど幅広い技術スタックで対応します。",
+      "フロントエンドからバックエンドまで一貫したWebサービス開発・受託開発を承っております。React, Next.js, Vue.js, Go, Python, PHP, Ruby on Rails, Laravelなど幅広い技術スタックで対応します。",
   },
   alternates: {
     canonical: "/webdev",
@@ -18,8 +44,38 @@ export const metadata: Metadata = {
 };
 
 export default function WebDev() {
+  const serviceJsonLd = createServiceJsonLd({
+    name: "Web開発・受託開発",
+    description:
+      "フロントエンドからバックエンドまで一貫したWebサービス開発。React, Next.js, Vue.js, TypeScript, Go, Python, Rails, Laravelなど幅広い技術スタックで開発案件に対応します。",
+    provider: "のっちまん (三宅 健太郎)",
+    url: "https://notchman.tech/webdev",
+    serviceType: "SoftwareDevelopmentService",
+  });
+
+  const breadcrumbJsonLd = createBreadcrumbJsonLd([
+    { name: "Home", url: "https://notchman.tech" },
+    { name: "Web開発", url: "https://notchman.tech/webdev" },
+  ]);
+
   return (
     <div className={styles.container}>
+      <Script
+        id="service-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd),
+        }}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+        strategy="afterInteractive"
+      />
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>Web開発</h1>
@@ -105,9 +161,7 @@ export default function WebDev() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

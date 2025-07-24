@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/containers/Header";
 import styles from "@/styles/Home.module.css";
 
@@ -94,9 +95,7 @@ export default function ContactPage() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

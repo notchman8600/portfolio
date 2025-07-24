@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
 import styles from "@/styles/Home.module.css";
@@ -84,9 +85,7 @@ export default function BackendPage() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

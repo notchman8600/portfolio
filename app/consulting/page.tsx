@@ -1,16 +1,35 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { Footer } from "@/components/Footer";
+import {
+  createBreadcrumbJsonLd,
+  createServiceJsonLd,
+} from "@/components/jsonLd";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
   title:
-    "技術コンサル・スクラム導入支援 | のっちまん(notch_man)のポートフォリオ",
+    "技術コンサル・スクラム導入支援 | のっちまん(notch_man) | アジャイル開発・技術選定・アーキテクチャ設計",
   description:
-    "認定スクラムマスター(CSM)として、アジャイル開発の導入・実践を支援します。開発プロセスの改善から技術選定まで、幅広いコンサルティングを提供します。",
+    "認定スクラムマスター(CSM)として、アジャイル開発の導入・実践を支援します。開発プロセスの改善・技術選定・アーキテクチャ設計・開発体制構築・技術的負債解消まで、幅広い技術コンサルティングを提供します。ビジネスの成長を技術面から支援します。お気軽にお問い合わせください。",
+  keywords: [
+    "技術コンサル",
+    "スクラム導入",
+    "アジャイル開発",
+    "スクラムマスター",
+    "CSM",
+    "技術選定",
+    "アーキテクチャ設計",
+    "開発体制構築",
+    "プロセス改善",
+    "技術的負債",
+    "アジャイルコーチング",
+  ],
   openGraph: {
     title:
-      "技術コンサル・スクラム導入支援 | のっちまん(notch_man)のポートフォリオ",
+      "技術コンサル・スクラム導入支援 | のっちまん(notch_man) | アジャイル開発・技術選定・アーキテクチャ設計",
     description:
       "認定スクラムマスター(CSM)として、アジャイル開発の導入・実践を支援します。開発プロセスの改善から技術選定まで、幅広いコンサルティングを提供します。",
   },
@@ -20,8 +39,41 @@ export const metadata: Metadata = {
 };
 
 export default function Consulting() {
+  const serviceJsonLd = createServiceJsonLd({
+    name: "技術コンサル・スクラム導入支援",
+    description:
+      "認定スクラムマスター(CSM)として、アジャイル開発の導入から実践まで支援。技術選定、アーキテクチャ設計、開発体制構築、技術的負債解消まで幅広くコンサルティングを提供します。",
+    provider: "のっちまん (三宅 健太郎)",
+    url: "https://notchman.tech/consulting",
+    serviceType: "ConsultingService",
+  });
+
+  const breadcrumbJsonLd = createBreadcrumbJsonLd([
+    { name: "Home", url: "https://notchman.tech" },
+    {
+      name: "技術コンサル・スクラム導入支援",
+      url: "https://notchman.tech/consulting",
+    },
+  ]);
+
   return (
     <div className={styles.container}>
+      <Script
+        id="service-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd),
+        }}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+        strategy="afterInteractive"
+      />
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>技術コンサル・スクラム導入支援</h1>
@@ -109,9 +161,7 @@ export default function Consulting() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

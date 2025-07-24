@@ -1,16 +1,39 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { Footer } from "@/components/Footer";
+import {
+  createBreadcrumbJsonLd,
+  createServiceJsonLd,
+} from "@/components/jsonLd";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "技術研修・メンター | のっちまん(notch_man)のポートフォリオ",
+  title:
+    "技術研修・メンター・企業研修 | のっちまん(notch_man) | 新人研修・スキルアップ研修承ります",
   description:
-    "大学でのenPiTメンターとして、PBL形式でのアジャイル開発教育を実施。企業向けの技術研修や若手エンジニアの育成支援も行っています。",
+    "大学でのenPiTメンターとして、PBL形式でのアジャイル開発教育を実施。企業向けの技術研修（新人研修・Git/GitHub研修・Docker研修・アジャイル開発研修）や若手エンジニアの育成支援を承っております。実践的なカリキュラムで即戦力を育成します。お気軽にお問い合わせください。",
+  keywords: [
+    "技術研修",
+    "企業研修",
+    "新人研修",
+    "エンジニア研修",
+    "Git研修",
+    "GitHub研修",
+    "Docker研修",
+    "アジャイル研修",
+    "スクラム研修",
+    "技術メンター",
+    "エンジニア育成",
+    "PBL教育",
+    "enPiT",
+  ],
   openGraph: {
-    title: "技術研修・メンター | のっちまん(notch_man)のポートフォリオ",
+    title:
+      "技術研修・メンター・企業研修 | のっちまん(notch_man) | 新人研修・スキルアップ研修承ります",
     description:
-      "大学でのenPiTメンターとして、PBL形式でのアジャイル開発教育を実施。企業向けの技術研修や若手エンジニアの育成支援も行っています。",
+      "大学でのenPiTメンターとして、PBL形式でのアジャイル開発教育を実施。企業向けの技術研修や若手エンジニアの育成支援を承っております。",
   },
   alternates: {
     canonical: "/training",
@@ -18,8 +41,38 @@ export const metadata: Metadata = {
 };
 
 export default function Training() {
+  const serviceJsonLd = createServiceJsonLd({
+    name: "技術研修・メンター・企業研修",
+    description:
+      "大学でのenPiTメンター経験を活かし、実践的な技術研修を提供。Git/GitHub研修、Docker研修、アジャイル開発研修など、企業のニーズに応じたカスタマイズ研修を実施します。",
+    provider: "のっちまん (三宅 健太郎)",
+    url: "https://notchman.tech/training",
+    serviceType: "EducationalService",
+  });
+
+  const breadcrumbJsonLd = createBreadcrumbJsonLd([
+    { name: "Home", url: "https://notchman.tech" },
+    { name: "技術研修・メンター", url: "https://notchman.tech/training" },
+  ]);
+
   return (
     <div className={styles.container}>
+      <Script
+        id="service-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd),
+        }}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+        strategy="afterInteractive"
+      />
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>技術研修・メンター</h1>
@@ -114,9 +167,7 @@ export default function Training() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Footer } from "@/components/Footer";
 import { Profile } from "@/components/Profile";
 import { ProfileDetail } from "@/components/ProfileDetail";
 import { Header } from "@/containers/Header";
@@ -110,9 +111,7 @@ export default function Home() {
         ></SkillCardsWithLink>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

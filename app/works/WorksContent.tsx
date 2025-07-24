@@ -1,4 +1,5 @@
 import { styled } from "@linaria/react";
+import { Footer } from "@/components/Footer";
 import { OgpCardLocal } from "@/components/OgpCardLocal";
 import { WorksDetail } from "@/components/ProfileDetail";
 import { Header } from "@/containers/Header";
@@ -143,9 +144,7 @@ export default function WorksContent() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }
