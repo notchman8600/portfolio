@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/containers/Header";
-import styles from "../../styles/Home.module.css";
 import { SkillCards } from "@/containers/SkillCards";
+import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
   title: "Web開発 | のっちまん(notch_man)のポートフォリオ",
@@ -26,7 +26,7 @@ export default function WebDev() {
         <p className={styles.description}>
           フロントエンドからバックエンドまで一貫した開発をサポートします
         </p>
-        
+
         <h2 className={styles.subtitle}>フロントエンド開発</h2>
         <SkillCards
           props={[

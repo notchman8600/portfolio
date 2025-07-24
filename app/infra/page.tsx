@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/containers/Header";
-import styles from "../../styles/Home.module.css";
 import { SkillCards } from "@/containers/SkillCards";
+import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
   title: "インフラ構築・運用 | のっちまん(notch_man)のポートフォリオ",

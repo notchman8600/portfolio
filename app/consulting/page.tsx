@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { Header } from "@/containers/Header";
-import styles from "../../styles/Home.module.css";
 import { SkillCards } from "@/containers/SkillCards";
+import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "技術コンサル・スクラム導入支援 | のっちまん(notch_man)のポートフォリオ",
+  title:
+    "技術コンサル・スクラム導入支援 | のっちまん(notch_man)のポートフォリオ",
   description:
     "認定スクラムマスター(CSM)として、アジャイル開発の導入・実践を支援します。開発プロセスの改善から技術選定まで、幅広いコンサルティングを提供します。",
   openGraph: {
-    title: "技術コンサル・スクラム導入支援 | のっちまん(notch_man)のポートフォリオ",
+    title:
+      "技術コンサル・スクラム導入支援 | のっちまん(notch_man)のポートフォリオ",
     description:
       "認定スクラムマスター(CSM)として、アジャイル開発の導入・実践を支援します。開発プロセスの改善から技術選定まで、幅広いコンサルティングを提供します。",
   },

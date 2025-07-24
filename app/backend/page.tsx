@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
-import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import styles from "@/styles/Home.module.css";
 
 export const metadata: Metadata = {

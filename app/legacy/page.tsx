@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/containers/Header";
-import styles from "../../styles/Home.module.css";
 import { SkillCards } from "@/containers/SkillCards";
+import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
   title: "レガシー改善・システム設計 | のっちまん(notch_man)のポートフォリオ",
@@ -87,9 +87,9 @@ export default function Legacy() {
             {
               title: "Railsアップグレードプロジェクト",
               desc:
-                "Rails 5系から6系、7系への段階的アップグレードを実施。" +
-                "大規模なコードベースでも計画的な移行により、ダウンタイムなしで完了。" +
-                "PR TIMES社でのSmartyバージョンアップなど、実績多数。",
+                "古いRailsのシステムのバージョンアッププロジェクトに従事。" +
+                "10年以上の負債がたまっている大規模なコードベースでも計画的な移行により、ダウンタイムを最小にしつつで移行を完了した実績があります。" +
+                "他にも大規模システムのレガシーライブラリのバージョンアップなど、リファクタリングのゴール設定から戦略構築、技術支援から実装まで幅広く行えます。",
             },
             {
               title: "レガシーPHPシステムの改善",

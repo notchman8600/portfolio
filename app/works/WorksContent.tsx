@@ -18,8 +18,8 @@ export default function WorksContent() {
           <WorkCard>
             <h3>大規模SNSマーケティングサービスの開発</h3>
             <p>
-              ストック素材販売サービスのWeb・モバイルアプリ開発を担当。
-              React NativeによるiOS/Androidアプリ開発、Railsのレガシー改善、
+              ストック素材販売サービスのWeb・モバイルアプリ開発を担当。 React
+              NativeによるiOS/Androidアプリ開発、Railsのレガシー改善、
               認定スクラムマスターとしてスクラム導入を支援。
               Railsバージョンアッププロジェクトの推進・実行も担当。
             </p>
@@ -40,7 +40,6 @@ export default function WorksContent() {
               技術的負債の解消とパフォーマンス改善を実現。
             </p>
           </WorkCard>
-
         </WorksGrid>
 
         <h2 className={styles.subtitle}>研究実績</h2>
@@ -48,7 +47,8 @@ export default function WorksContent() {
           <WorkCard>
             <h3>WWW'24 国際学会発表（フルペーパー）</h3>
             <p>
-              「NETEVOLVE: Social Network Forecasting using Multi-Agent Reinforcement Learning with Interpretable Features」
+              「NETEVOLVE: Social Network Forecasting using Multi-Agent
+              Reinforcement Learning with Interpretable Features」
               強化学習を用いたソーシャルネットワークの将来予測手法について発表。
               ACM The WebConferenceにてフルペーパー論文として採択。
             </p>

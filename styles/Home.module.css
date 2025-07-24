@@ -131,16 +131,16 @@
   .main {
     padding: 2rem 1rem;
   }
-  
+
   .grid {
     width: 100%;
     flex-direction: column;
   }
-  
+
   .skillsTitle {
     font-size: 2rem;
   }
-  
+
   .subtitle {
     font-size: 1.5rem;
   }
@@ -171,7 +171,7 @@
 }
 
 .skillsTitle::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -188,4 +188,37 @@
   text-align: center;
   font-weight: 600;
   color: #444;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1f2937;
+  background-color: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.contactLink:hover {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
