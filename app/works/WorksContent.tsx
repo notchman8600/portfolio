@@ -1,5 +1,3 @@
-"use client";
-
 import { styled } from "@linaria/react";
 import { OgpCardLocal } from "@/components/OgpCardLocal";
 import { WorksDetail } from "@/components/ProfileDetail";
