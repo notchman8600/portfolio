@@ -3,7 +3,10 @@ import Script from "next/script";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
 import { Footer } from "@/components/Footer";
-import { createServiceJsonLd, createBreadcrumbJsonLd } from "@/components/jsonLd";
+import {
+  createServiceJsonLd,
+  createBreadcrumbJsonLd,
+} from "@/components/jsonLd";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
@@ -47,7 +50,10 @@ export default function Consulting() {
 
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
     { name: "Home", url: "https://notchman.tech" },
-    { name: "技術コンサル・スクラム導入支援", url: "https://notchman.tech/consulting" },
+    {
+      name: "技術コンサル・スクラム導入支援",
+      url: "https://notchman.tech/consulting",
+    },
   ]);
 
   return (

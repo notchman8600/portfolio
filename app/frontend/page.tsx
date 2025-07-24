@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
+import { Footer } from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
 
 export const metadata: Metadata = {
@@ -77,9 +78,7 @@ export default function FrontendPage() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

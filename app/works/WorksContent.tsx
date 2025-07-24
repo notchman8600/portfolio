@@ -2,6 +2,7 @@ import { styled } from "@linaria/react";
 import { OgpCardLocal } from "@/components/OgpCardLocal";
 import { WorksDetail } from "@/components/ProfileDetail";
 import { Header } from "@/containers/Header";
+import { Footer } from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
 
 export default function WorksContent() {
@@ -143,9 +144,7 @@ export default function WorksContent() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

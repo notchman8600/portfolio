@@ -36,7 +36,9 @@ export const createServiceJsonLd = ({
   };
 };
 
-export const createBreadcrumbJsonLd = (items: { name: string; url: string }[]) => {
+export const createBreadcrumbJsonLd = (
+  items: { name: string; url: string }[]
+) => {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

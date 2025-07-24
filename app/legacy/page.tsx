@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
+import { Footer } from "@/components/Footer";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "レガシー改善・システム設計・リファクタリング | のっちまん(notch_man) | 技術的負債解消・モダナイゼーション",
+  title:
+    "レガシー改善・システム設計・リファクタリング | のっちまん(notch_man) | 技術的負債解消・モダナイゼーション",
   description:
     "レガシーコードリファクタリング業（見習い）として、既存システムの改善・リファクタリングに取り組んでいます。Rails・Laravelのバージョンアップ、技術的負債の解消、マイクロサービス移行、モダンなアーキテクチャへの移行まで幅広くサポートします。開発案件としてお気軽にお問い合わせください。",
   keywords: [
@@ -22,7 +24,8 @@ export const metadata: Metadata = {
     "開発案件",
   ],
   openGraph: {
-    title: "レガシー改善・システム設計・リファクタリング | のっちまん(notch_man) | 技術的負債解消・モダナイゼーション",
+    title:
+      "レガシー改善・システム設計・リファクタリング | のっちまん(notch_man) | 技術的負債解消・モダナイゼーション",
     description:
       "レガシーコードリファクタリング業（見習い）として、既存システムの改善に取り組んでいます。技術的負債の解消から、モダンなアーキテクチャへの移行まで幅広くサポートします。",
   },
@@ -121,9 +124,7 @@ export default function Legacy() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

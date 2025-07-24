@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
+import { Footer } from "@/components/Footer";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "インフラ構築・運用・AWS移行 | のっちまん(notch_man) | クラウド・コンテナ・サーバーレス",
+  title:
+    "インフラ構築・運用・AWS移行 | のっちまん(notch_man) | クラウド・コンテナ・サーバーレス",
   description:
     "Docker、Kubernetes、AWSを活用したインフラ構築・運用・クラウド移行をサポート。オンプレからAWSへの移行、CI/CDパイプラインの構築、サーバーレスアーキテクチャ、高負荷環境の運用まで幅広く対応します。開発案件としてお気軽にお問い合わせください。",
   keywords: [
@@ -25,7 +27,8 @@ export const metadata: Metadata = {
     "開発案件",
   ],
   openGraph: {
-    title: "インフラ構築・運用・AWS移行 | のっちまん(notch_man) | クラウド・コンテナ・サーバーレス",
+    title:
+      "インフラ構築・運用・AWS移行 | のっちまん(notch_man) | クラウド・コンテナ・サーバーレス",
     description:
       "Docker、Kubernetes、AWSを活用したインフラ構築・運用をサポート。CI/CDパイプラインの構築から、高負荷環境の運用まで幅広く対応します。",
   },
@@ -151,9 +154,7 @@ export default function Infra() {
         </p>
       </main>
 
-      <footer className={styles.footer}>
-        Authored by notch_man, Powered by Next.js
-      </footer>
+      <Footer />
     </div>
   );
 }

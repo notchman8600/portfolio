@@ -3,11 +3,15 @@ import Script from "next/script";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
 import { Footer } from "@/components/Footer";
-import { createServiceJsonLd, createBreadcrumbJsonLd } from "@/components/jsonLd";
+import {
+  createServiceJsonLd,
+  createBreadcrumbJsonLd,
+} from "@/components/jsonLd";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "技術研修・メンター・企業研修 | のっちまん(notch_man) | 新人研修・スキルアップ研修承ります",
+  title:
+    "技術研修・メンター・企業研修 | のっちまん(notch_man) | 新人研修・スキルアップ研修承ります",
   description:
     "大学でのenPiTメンターとして、PBL形式でのアジャイル開発教育を実施。企業向けの技術研修（新人研修・Git/GitHub研修・Docker研修・アジャイル開発研修）や若手エンジニアの育成支援を承っております。実践的なカリキュラムで即戦力を育成します。お気軽にお問い合わせください。",
   keywords: [
@@ -26,7 +30,8 @@ export const metadata: Metadata = {
     "enPiT",
   ],
   openGraph: {
-    title: "技術研修・メンター・企業研修 | のっちまん(notch_man) | 新人研修・スキルアップ研修承ります",
+    title:
+      "技術研修・メンター・企業研修 | のっちまん(notch_man) | 新人研修・スキルアップ研修承ります",
     description:
       "大学でのenPiTメンターとして、PBL形式でのアジャイル開発教育を実施。企業向けの技術研修や若手エンジニアの育成支援を承っております。",
   },

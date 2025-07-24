@@ -3,11 +3,15 @@ import Script from "next/script";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
 import { Footer } from "@/components/Footer";
-import { createServiceJsonLd, createBreadcrumbJsonLd } from "@/components/jsonLd";
+import {
+  createServiceJsonLd,
+  createBreadcrumbJsonLd,
+} from "@/components/jsonLd";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
-  title: "Web開発・受託開発・開発案件 | のっちまん(notch_man) | フロントエンド・バックエンド・フルスタック開発",
+  title:
+    "Web開発・受託開発・開発案件 | のっちまん(notch_man) | フロントエンド・バックエンド・フルスタック開発",
   description:
     "フロントエンドからバックエンドまで一貫したWebサービス開発・受託開発を承っております。React, Next.js, Vue.js, TypeScript, Go, Python, PHP, Ruby on Rails, Laravelなど幅広い技術スタックで開発案件に対応します。マイクロサービス開発・API開発・パフォーマンス最適化などお気軽にお問い合わせください。",
   keywords: [
@@ -29,7 +33,8 @@ export const metadata: Metadata = {
     "マイクロサービス",
   ],
   openGraph: {
-    title: "Web開発・受託開発・開発案件 | のっちまん(notch_man) | フロントエンド・バックエンド・フルスタック開発",
+    title:
+      "Web開発・受託開発・開発案件 | のっちまん(notch_man) | フロントエンド・バックエンド・フルスタック開発",
     description:
       "フロントエンドからバックエンドまで一貫したWebサービス開発・受託開発を承っております。React, Next.js, Vue.js, Go, Python, PHP, Ruby on Rails, Laravelなど幅広い技術スタックで対応します。",
   },
