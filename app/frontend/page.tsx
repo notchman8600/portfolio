@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/containers/Header";
 import { SkillCards } from "@/containers/SkillCards";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import styles from "@/styles/Home.module.css";
 
 export const metadata: Metadata = {
@@ -13,17 +14,26 @@ export const metadata: Metadata = {
       "のっちまんのフロントエンド開発スキル。React, Next.js, TypeScriptを使ったWebアプリケーション開発を得意としています。案件のご依頼を承っております。",
     images: [
       {
-        url: "",
-        width: 1280,
-        height: 960,
+        url: "https://notchman.tech/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "のっちまんのフロントエンド開発",
       },
     ],
+    type: "website",
+    url: "https://notchman.tech/frontend",
   },
 };
 
 export default function FrontendPage() {
   return (
     <div className={styles.container}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://notchman.tech" },
+          { name: "フロントエンド開発", url: "https://notchman.tech/frontend" },
+        ]}
+      />
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>フロントエンドのスキル</h1>

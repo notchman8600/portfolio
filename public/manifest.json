@@ -1,0 +1,33 @@
+{
+  "name": "のっちまん(notch_man)のポートフォリオ",
+  "short_name": "notch_manポートフォリオ",
+  "description": "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/profile.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "business", "developer"],
+  "screenshots": [
+    {
+      "src": "/profile.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "label": "ポートフォリオのスクリーンショット"
+    }
+  ]
+}

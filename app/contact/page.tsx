@@ -13,11 +13,14 @@ export const metadata: Metadata = {
       "のっちまんへの案件のご依頼・お問い合わせはこちらから。フロントエンド・バックエンド・インフラまで幅広く対応可能です。",
     images: [
       {
-        url: "",
-        width: 1280,
-        height: 960,
+        url: "https://notchman.tech/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "のっちまんへのお問い合わせ",
       },
     ],
+    type: "website",
+    url: "https://notchman.tech/contact",
   },
 };
 
@@ -30,10 +33,18 @@ export default function ContactPage() {
         <p className={styles.description}>
           案件のご依頼等のお問い合わせはTwitterまたはFacebookからお願いします。
         </p>
-        <Link href={"https://twitter.com/notchman8600"}>
+        <Link
+          href={"https://twitter.com/notchman8600"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Twitterはこちらから
         </Link>
-        <Link href={"https://www.facebook.com/nct15317"}>
+        <Link
+          href={"https://www.facebook.com/nct15317"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Facebookはこちらから
         </Link>
       </main>

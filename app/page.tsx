@@ -15,11 +15,26 @@ export const metadata: Metadata = {
       "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。案件のご依頼を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
     images: [
       {
-        url: "",
-        width: 1280,
-        height: 960,
+        url: "https://notchman.tech/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "のっちまん(notch_man)のプロフィール画像",
       },
     ],
+    type: "website",
+    url: "https://notchman.tech/",
+    siteName: "のっちまんのポートフォリオ",
+    locale: "ja_JP",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア",
+    description:
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。",
+    images: ["https://notchman.tech/profile.jpg"],
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
