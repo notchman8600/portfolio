@@ -11,10 +11,12 @@ export default function WorksContent() {
     <div className={styles.container}>
       <Header />
       <main className={styles.main}>
-        <p className={styles.description}>これまでの活動実績（随時更新）</p>
+        <h1 className={styles.title}>実績・作品</h1>
+        
+        <h2 className={styles.subtitle}>これまでの活動実績（随時更新）</h2>
 
         <WorksDetail />
-        <p className={styles.description}>これまでのハッカソンでの作品</p>
+        <h2 className={styles.subtitle}>これまでのハッカソンでの作品</h2>
 
         <GridBox>
           <OgpCardLocal

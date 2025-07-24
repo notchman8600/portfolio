@@ -38,7 +38,7 @@ export default function FrontendPage() {
       <main className={styles.main}>
         <h1 className={styles.title}>フロントエンドのスキル</h1>
 
-        <p className={styles.description}>主な技術スタックについて</p>
+        <h2 className={styles.subtitle}>主な技術スタック</h2>
         <SkillCards
           props={[
             {

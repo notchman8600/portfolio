@@ -29,7 +29,9 @@ export default function ContactPage() {
     <div className={styles.container}>
       <Header />
       <main className={styles.main}>
-        <h1 className={styles.title}>お問い合わせ先</h1>
+        <h1 className={styles.title}>お問い合わせ</h1>
+        
+        <h2 className={styles.subtitle}>お問い合わせ方法</h2>
         <p className={styles.description}>
           案件のご依頼等のお問い合わせはTwitterまたはFacebookからお願いします。
         </p>
