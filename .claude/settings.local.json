@@ -4,7 +4,8 @@
       "Bash(curl:*)",
       "Bash(mkdir:*)",
       "Bash(node:*)",
-      "Bash(yarn add:*)"
+      "Bash(yarn add:*)",
+      "Bash(find:*)"
     ],
     "deny": []
   }
