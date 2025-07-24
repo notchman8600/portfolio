@@ -8,8 +8,8 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Ogp
-        pageTitle={"notch_manのぽーとふぉりお"}
-        pageDescription={"このサイトはnotch_man君の個人サイトです"}
+        pageTitle={"お問い合わせ | のっちまん(notch_man)のポートフォリオ"}
+        pageDescription={"のっちまんへの案件のご依頼・お問い合わせはこちらから。フロントエンド・バックエンド・インフラまで幅広く対応可能です。"}
         pageImg={""}
         pageWidth={1280}
         pageHeight={960}

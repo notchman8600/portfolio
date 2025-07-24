@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(mkdir:*)",
+      "Bash(node:*)",
+      "Bash(yarn add:*)"
+    ],
+    "deny": []
+  }
+}

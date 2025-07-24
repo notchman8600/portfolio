@@ -8,8 +8,8 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Ogp
-        pageTitle={"notch_manのぽーとふぉりお"}
-        pageDescription={"このサイトはnotch_man君の個人サイトです"}
+        pageTitle={"バックエンド開発 | のっちまん(notch_man)のポートフォリオ"}
+        pageDescription={"のっちまんのバックエンド開発スキル。Go, Python, PHP, Rubyを使ったAPIサーバーやWebサービスの開発・運用実績が豊富です。案件のご依頼を承っております。"}
         pageImg={""}
         pageWidth={1280}
         pageHeight={960}
@@ -53,7 +53,9 @@ const Home: NextPage = () => {
             url: ""
           },
         ]}></SkillCards>
-
+        <p className={styles.description}>
+          バックエンド開発の案件を承っております。お気軽に<a href="/contact">お問い合わせ</a>ください。
+        </p>
 
       </main>
 

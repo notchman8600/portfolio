@@ -8,8 +8,8 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Ogp
-        pageTitle={"notch_manのぽーとふぉりお"}
-        pageDescription={"このサイトはnotch_man君の個人サイトです"}
+        pageTitle={"フロントエンド開発 | のっちまん(notch_man)のポートフォリオ"}
+        pageDescription={"のっちまんのフロントエンド開発スキル。React, Next.js, TypeScriptを使ったWebアプリケーション開発を得意としています。案件のご依頼を承っております。"}
         pageImg={""}
         pageWidth={1280}
         pageHeight={960}
@@ -46,6 +46,9 @@ const Home: NextPage = () => {
             url: ""
           }
         ]}></SkillCards>
+        <p className={styles.description}>
+          フロントエンド開発の案件を承っております。お気軽に<a href="/contact">お問い合わせ</a>ください。
+        </p>
       </main>
 
       <footer className={styles.footer}>

@@ -10,8 +10,8 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Ogp
-        pageTitle={"notch_manのぽーとふぉりお"}
-        pageDescription={"このサイトはnotch_man君の個人サイトです"}
+        pageTitle={"のっちまん(notch_man)のポートフォリオ | フルスタックエンジニア"}
+        pageDescription={"のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能なフルスタックエンジニアです。案件のご依頼を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。"}
         pageImg={""}
         pageWidth={1280}
         pageHeight={960}
@@ -33,8 +33,9 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>自己紹介</p>
-        <Profile jaName={"三宅　健太郎"} enName={"Kentaro Miyake"}/>
+        <Profile jaName={"三宅　健太郎 (のっちまん)"} enName={"Kentaro Miyake (notch_man)"}/>
         <ProfileDetail/>
+        <p className={styles.description}>現在、新規案件を募集中です！お気軽にお問い合わせください。</p>
         <p className={styles.description}>どんなお仕事をしていますか？</p>
         <SkillCardsWithLink props={[
           {
