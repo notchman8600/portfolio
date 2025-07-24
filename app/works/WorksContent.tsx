@@ -156,9 +156,14 @@ const GridBox = styled.div`
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 0 1rem;
   }
 `;
 
@@ -167,9 +172,14 @@ const WorksGrid = styled.div`
   gap: 2rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 0 1rem;
   }
 `;
 
