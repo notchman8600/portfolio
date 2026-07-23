@@ -14,21 +14,13 @@
     "@linaria/babel-preset": "^5.0.4",
     "@linaria/core": "^6.3.0",
     "@linaria/react": "^6.3.0",
-    "axios": "^1.11.0",
-    "buffer": "^6.0.3",
-    "jsdom": "^26.1.0",
-    "net": "^1.0.2",
     "next": "14.2.30",
     "next-with-linaria": "^1.2.0",
-    "node-fetch": "^3.3.2",
     "react": "~18.3.1",
-    "react-dom": "~18.3.1",
-    "swr": "^2.3.4",
-    "tls": "^0.0.1"
+    "react-dom": "~18.3.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.2",
-    "@types/jsdom": "^21.1.7",
     "@types/node": "22.16.5",
     "@types/react": "~18.3.23",
     "autoprefixer": "^10.4.21",

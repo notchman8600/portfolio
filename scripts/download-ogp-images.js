@@ -1,5 +1,3 @@
-const fetch = (...args) =>
-  import("node-fetch").then(({ default: fetch }) => fetch(...args));
 const fs = require("fs");
 const path = require("path");
 
@@ -39,7 +37,7 @@ async function fetchOgpImages() {
 
         // Download image
         const imageResponse = await fetch(imageUrl);
-        const buffer = await imageResponse.buffer();
+        const buffer = Buffer.from(await imageResponse.arrayBuffer());
 
         const fileName = `project-${projectId}.jpg`;
         const filePath = path.join(dir, fileName);
