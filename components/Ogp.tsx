@@ -1,5 +1,5 @@
 import Head from "next/head";
-import type { VFC } from "react";
+import type { FC } from "react";
 
 interface MetaData {
   pageTitle?: string;
@@ -10,7 +10,7 @@ interface MetaData {
   pageHeight?: number;
 }
 
-const Ogp: VFC<MetaData> = ({
+const Ogp: FC<MetaData> = ({
   pageTitle,
   pageDescription,
   pageUrl,
