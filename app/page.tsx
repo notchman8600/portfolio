@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { Profile } from "@/components/Profile";
 import { ProfileDetail } from "@/components/ProfileDetail";
-import { Header } from "@/containers/Header";
-import { SkillCardsWithLink } from "@/containers/SkillCards";
+import { SkillCardsWithLink } from "@/components/SkillCards";
 import styles from "../styles/Home.module.css";
 
 export const metadata: Metadata = {
@@ -63,7 +63,8 @@ export default function Home() {
         />
         <ProfileDetail />
         <p className={styles.description}>
-          現在、新規案件を募集中です！お気軽に<a href="/contact">お問い合わせください</a>。
+          現在、新規案件を募集中です！お気軽に
+          <a href="/contact">お問い合わせください</a>。
         </p>
         <h2 className={styles.skillsTitle}>提供できるサービス・スキル</h2>
         <SkillCardsWithLink

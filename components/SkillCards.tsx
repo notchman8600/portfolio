@@ -1,20 +1,13 @@
 import { styled } from "@linaria/react";
-import React from "react";
 import { SkillCard, SkillCardWithLink } from "@/components/SkillCard";
-
-interface SkillCardProps {
-  title: string;
-  desc: string;
-  url: string;
-}
 
 export const SkillCardsWithLink = ({ props }: any) => {
   return (
     <div>
       <GridContainerStyle>
-        {props.map((value, index) => (
+        {props.map((value) => (
           <SkillCardWithLink
-            key={index}
+            key={value.url}
             title={value.title}
             desc={value.desc}
             url={value.url}
@@ -28,10 +21,9 @@ export const SkillCards = ({ props }: any) => {
   return (
     <div>
       <GridContainerStyle>
-        {props.map((value, index) => (
-          <div>
+        {props.map((value) => (
+          <div key={value.url}>
             <SkillCard
-              key={index}
               title={value.title}
               desc={value.desc}
               url={value.url}

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import {
   createBreadcrumbJsonLd,
   createServiceJsonLd,
 } from "@/components/jsonLd";
-import { Header } from "@/containers/Header";
-import { SkillCards } from "@/containers/SkillCards";
+import { SkillCards } from "@/components/SkillCards";
 import styles from "../../styles/Home.module.css";
 
 export const metadata: Metadata = {
@@ -63,6 +63,7 @@ export default function WebDev() {
       <Script
         id="service-jsonld"
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceJsonLd),
         }}
@@ -71,6 +72,7 @@ export default function WebDev() {
       <Script
         id="breadcrumb-jsonld"
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbJsonLd),
         }}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/containers/Header";
+import { Header } from "@/components/Header";
 import styles from "@/styles/Home.module.css";
 
 export const metadata: Metadata = {
