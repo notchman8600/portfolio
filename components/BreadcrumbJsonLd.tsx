@@ -25,6 +25,7 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
     <Script
       id="breadcrumb-json-ld"
       type="application/ld+json"
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(breadcrumbList),
       }}

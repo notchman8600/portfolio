@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 
 const urls = [
   "https://topaz.dev/projects/3cb8f7e2be54f7083f99",
@@ -31,7 +31,7 @@ async function fetchOgpImages() {
         /<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["']/
       );
 
-      if (ogImageMatch && ogImageMatch[1]) {
+      if (ogImageMatch?.[1]) {
         const imageUrl = ogImageMatch[1];
         console.log(`Project ${projectId}: Found image URL: ${imageUrl}`);
 

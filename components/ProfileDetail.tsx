@@ -1,13 +1,11 @@
 import { styled } from "@linaria/react";
-import React from "react";
 
 export const ProfileDetail = () => {
   return (
     <div>
       <ProfileDetailBox>
         <ProfileText>
-          「のっちまん」として称して活動している全方位型エンジニア。
-          筑波大学
+          「のっちまん」として称して活動している全方位型エンジニア。 筑波大学
           情報学学位プログラムに所属し、高専時代からコンピューターサイエンスを学んでいます。
           研究室は
           <LinkText

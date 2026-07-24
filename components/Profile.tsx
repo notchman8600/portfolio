@@ -1,6 +1,5 @@
 import { styled } from "@linaria/react";
 import Image from "next/image";
-import React from "react";
 
 interface ProfileProps {
   jaName: string;
