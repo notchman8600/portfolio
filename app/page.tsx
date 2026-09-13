@@ -34,7 +34,9 @@ export default function Home() {
         過去の所属や研究・登壇実績は<Link href="/career">経歴ページ</Link>
         をご覧ください。
       </p>
-      <h2 className={styles.skillsTitle}>提供できるサービス・スキル</h2>
+      <h2 id="services" className={styles.skillsTitle}>
+        提供できるサービス・スキル
+      </h2>
       <SkillCardsWithLink
         props={[
           {
