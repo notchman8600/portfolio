@@ -1,41 +1,24 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { SkillCards } from "@/components/SkillCards";
+import { createPageMetadata } from "@/data/seo";
 import styles from "@/styles/Home.module.css";
 
-export const metadata: Metadata = {
-  title: "フロントエンド開発 | のっちまん(notch_man)のポートフォリオ",
-  description:
-    "のっちまんのフロントエンド開発スキル。React, Next.js, TypeScriptを使ったWebアプリケーション開発を得意としています。案件のご依頼を承っております。",
-  openGraph: {
-    title: "フロントエンド開発 | のっちまん(notch_man)のポートフォリオ",
-    description:
-      "のっちまんのフロントエンド開発スキル。React, Next.js, TypeScriptを使ったWebアプリケーション開発を得意としています。案件のご依頼を承っております。",
-    images: [
-      {
-        url: "https://notchman.tech/profile.jpg",
-        width: 1200,
-        height: 630,
-        alt: "のっちまんのフロントエンド開発",
-      },
-    ],
-    type: "website",
-    url: "https://notchman.tech/frontend",
-  },
-};
+export const metadata: Metadata = createPageMetadata("/frontend");
 
 export default function FrontendPage() {
   return (
-    <div className={styles.container}>
+    <>
       <BreadcrumbJsonLd
         items={[
-          { name: "ホーム", url: "https://notchman.tech" },
-          { name: "フロントエンド開発", url: "https://notchman.tech/frontend" },
+          { name: "ホーム", url: "https://www.notchman.tech" },
+          {
+            name: "フロントエンド開発",
+            url: "https://www.notchman.tech/frontend",
+          },
         ]}
       />
-      <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>フロントエンドのスキル</h1>
 
@@ -47,13 +30,6 @@ export default function FrontendPage() {
               desc:
                 "Reactを使ってシングルページのアプリケーションから複数ページアプリまで様々な開発実績があります。ハッカソンでフロントエンドを実装するときは8割以上がReactです。" +
                 "また、複雑なバリデーションをフォームアプリのフロント・バックエンド設計などの開発経験があります。CSSはbootstrapやtailwind cssなどがメインですが最近はlinariaを使った案件にも関わっています。",
-              url: "",
-            },
-            {
-              title: "Next.js",
-              desc:
-                "SEO対策などの理由でSSRを用いる必要のある案件を中心に採用しています。" +
-                "当サイトもNext.jsで構築されています。",
               url: "",
             },
             {
@@ -74,11 +50,9 @@ export default function FrontendPage() {
         ></SkillCards>
         <p className={styles.description}>
           フロントエンド開発の案件を承っております。お気軽に
-          <a href="/contact">お問い合わせ</a>ください。
+          <Link href="/contact">お問い合わせ</Link>ください。
         </p>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

@@ -1,9 +1,10 @@
 import { styled } from "@linaria/react";
-import Image from "next/image";
+import type { StaticImageData } from "next/image";
+import { StaticImage } from "@/components/StaticImage";
 
 interface OgpCardLocalProps {
   url: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
   title: string;
   desc: string;
 }
@@ -18,18 +19,19 @@ export const OgpCardLocal = (props: OgpCardLocalProps) => {
         style={{ textDecoration: "none" }}
       >
         <RoundImageBox>
-          <Image
+          <StaticImage
             src={props.imageUrl}
             width={544}
             height={306}
-            alt={"OGP画像"}
+            alt={props.title}
+            sizes="(max-width: 600px) calc(100vw - 8rem), (max-width: 768px) calc(100vw - 10rem), (max-width: 1312px) calc((100vw - 14rem) / 2), 544px"
             style={{
               objectFit: "cover",
               aspectRatio: "16/9",
               maxWidth: "100%",
               height: "auto",
             }}
-          ></Image>
+          ></StaticImage>
           <ContentDesc>
             <ContentTitleBox>{props.title}</ContentTitleBox>
             <ContentDetailDesc>{props.desc}</ContentDetailDesc>

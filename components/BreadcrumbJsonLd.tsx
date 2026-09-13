@@ -1,4 +1,4 @@
-import Script from "next/script";
+import { StructuredData } from "@/components/StructuredData";
 
 interface BreadcrumbItem {
   name: string;
@@ -21,15 +21,5 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
     })),
   };
 
-  return (
-    <Script
-      id="breadcrumb-json-ld"
-      type="application/ld+json"
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(breadcrumbList),
-      }}
-      strategy="afterInteractive"
-    />
-  );
+  return <StructuredData id="breadcrumb-json-ld" data={breadcrumbList} />;
 }

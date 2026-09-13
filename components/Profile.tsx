@@ -1,5 +1,7 @@
 import { styled } from "@linaria/react";
-import Image from "next/image";
+import { StaticImage } from "@/components/StaticImage";
+
+import profileImage from "../public/profile.jpg";
 
 interface ProfileProps {
   jaName: string;
@@ -9,8 +11,8 @@ interface ProfileProps {
 export const Profile = (props: ProfileProps) => {
   return (
     <ProfileBox>
-      <Image
-        src="/profile.jpg"
+      <StaticImage
+        src={profileImage}
         width={256}
         height={256}
         alt="のっちまん(三宅健太郎)のプロフィール写真"
@@ -19,7 +21,7 @@ export const Profile = (props: ProfileProps) => {
           aspectRatio: "1/1",
           borderRadius: "9999px",
         }}
-        priority
+        preload
         quality={85}
       />
 

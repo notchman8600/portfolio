@@ -1,80 +1,37 @@
-import type { Metadata } from "next";
-import Script from "next/script";
+import type { Metadata, Viewport } from "next";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { StructuredData } from "@/components/StructuredData";
+import { SITE_NAME, SITE_URL, seoPages, siteUrl } from "@/data/seo";
+import styles from "@/styles/Home.module.css";
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
-  title:
-    "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア | 開発案件・技術コンサル・研修承ります",
-  description:
-    "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。開発案件・受託開発・技術コンサル・技術研修を承っております。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。お気軽にお問い合わせください。",
-  authors: [{ name: "のっちまん (Kentaro Miyake)" }],
-  keywords: [
-    "のっちまん",
-    "notch_man",
-    "三宅健太郎",
-    "Kentaro Miyake",
-    "フロントエンド",
-    "バックエンド",
-    "エンジニア",
-    "開発",
-    "案件",
-    "フリーランス",
-    "開発案件",
-    "受託開発",
-    "技術コンサル",
-    "技術研修",
-    "スクラムマスター",
-    "アジャイル開発",
-    "Web開発",
-    "システム開発",
-  ],
-  icons: {
-    icon: "/favicon.ico",
-  },
-  openGraph: {
-    title:
-      "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア | 開発案件・技術コンサル・研修承ります",
-    description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。開発案件・技術コンサル・技術研修を承っております。",
-    images: [
-      {
-        url: "https://notchman.tech/profile.jpg",
-        width: 1200,
-        height: 630,
-        alt: "のっちまん(notch_man)のポートフォリオ",
-      },
-    ],
-    type: "website",
-    url: "https://notchman.tech/",
-    siteName: "のっちまんのポートフォリオ",
-    locale: "ja_JP",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@notchman8600",
-    creator: "@notchman8600",
-    title:
-      "のっちまん(notch_man)のポートフォリオ | 全方位型エンジニア | 開発案件・技術コンサル・研修承ります",
-    description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。開発案件・技術コンサル・技術研修を承っております。",
-    images: ["https://notchman.tech/profile.jpg"],
-  },
-  metadataBase: new URL("https://notchman.tech"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL(SITE_URL),
+  title: seoPages["/"].title,
+  description: seoPages["/"].description,
+  applicationName: SITE_NAME,
+  authors: [{ name: "のっちまん（三宅健太郎）", url: SITE_URL }],
+  icons: { icon: "/favicon.ico", apple: "/profile.jpg" },
+  manifest: "/manifest.json",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
 };
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": siteUrl("/#website"),
     name: "のっちまんのポートフォリオ",
     alternateName: "notch_man's portfolio",
-    url: "https://notchman.tech",
+    url: "https://www.notchman.tech",
     description:
-      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニアです。",
+      "のっちまん(三宅健太郎)のポートフォリオサイト。フロントエンド・バックエンド・インフラから生成AI・LLM応用まで幅広く対応可能な全方位型エンジニアです。",
     author: {
+      "@id": siteUrl("/#person"),
       "@type": "Person",
       name: "のっちまん (三宅 健太郎)",
       alternateName: ["notch_man", "Kentaro Miyake"],
@@ -84,19 +41,36 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": siteUrl("/#person"),
+    image: siteUrl("/profile.jpg"),
     name: "のっちまん (三宅 健太郎)",
     alternateName: ["notch_man", "Kentaro Miyake"],
-    url: "https://notchman.tech",
-    jobTitle: "全方位型エンジニア",
+    url: "https://www.notchman.tech",
+    jobTitle: "機械学習エンジニア / 全方位型エンジニア",
     worksFor: {
       "@type": "Organization",
-      name: "フリーランス",
+      name: "LINEヤフー株式会社",
+      url: "https://www.lycorp.co.jp/",
     },
+    affiliation: [
+      {
+        "@type": "Organization",
+        name: "合同会社馬車馬テクノロジーズ",
+        url: "https://www.basyauma-tech.com/",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "筑波大学大学院 情報学学位プログラム",
+        url: "https://www.tsukuba.ac.jp/",
+      },
+    ],
     description:
-      "フロントエンド・バックエンド・インフラまで幅広く対応可能な全方位型エンジニア。React, Next.js, Go, Python, AWS等の技術スタックで開発支援いたします。",
+      "フロントエンド・バックエンド・インフラから生成AI・LLM応用まで幅広く対応可能な全方位型エンジニア。React, Next.js, Go, Python, AWS, LangChain等の技術スタックで開発支援いたします。",
     sameAs: [
       "https://twitter.com/notchman8600",
       "https://www.facebook.com/nct15317",
+      "https://github.com/notchman8600",
+      "https://www.wantedly.com/id/notchman8600",
     ],
     knowsAbout: [
       "React",
@@ -110,11 +84,16 @@ const jsonLd = [
       "AWS",
       "Docker",
       "Kubernetes",
+      "LLM",
+      "LangChain",
+      "生成AI",
+      "機械学習",
+      "強化学習",
       "フロントエンド開発",
       "バックエンド開発",
       "インフラ構築",
     ],
-    offers: {
+    makesOffer: {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
@@ -133,24 +112,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="apple-touch-icon" href="/profile.jpg" />
-      </head>
       <body>
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd),
-          }}
-          strategy="afterInteractive"
-        />
-        {children}
+        <StructuredData id="json-ld" data={jsonLd} />
+        <div className={styles.container}>
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

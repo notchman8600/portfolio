@@ -1,47 +1,15 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import Link from "next/link";
 import {
   createBreadcrumbJsonLd,
   createServiceJsonLd,
 } from "@/components/jsonLd";
 import { SkillCards } from "@/components/SkillCards";
+import { StructuredData } from "@/components/StructuredData";
+import { createPageMetadata } from "@/data/seo";
 import styles from "../../styles/Home.module.css";
 
-export const metadata: Metadata = {
-  title:
-    "Web開発・受託開発・開発案件 | のっちまん(notch_man) | フロントエンド・バックエンド・フルスタック開発",
-  description:
-    "フロントエンドからバックエンドまで一貫したWebサービス開発・受託開発を承っております。React, Next.js, Vue.js, TypeScript, Go, Python, PHP, Ruby on Rails, Laravelなど幅広い技術スタックで開発案件に対応します。マイクロサービス開発・API開発・パフォーマンス最適化などお気軽にお問い合わせください。",
-  keywords: [
-    "Web開発",
-    "受託開発",
-    "開発案件",
-    "フロントエンド開発",
-    "バックエンド開発",
-    "フルスタック開発",
-    "React",
-    "Next.js",
-    "Vue.js",
-    "TypeScript",
-    "Go",
-    "Python",
-    "Rails",
-    "Laravel",
-    "API開発",
-    "マイクロサービス",
-  ],
-  openGraph: {
-    title:
-      "Web開発・受託開発・開発案件 | のっちまん(notch_man) | フロントエンド・バックエンド・フルスタック開発",
-    description:
-      "フロントエンドからバックエンドまで一貫したWebサービス開発・受託開発を承っております。React, Next.js, Vue.js, Go, Python, PHP, Ruby on Rails, Laravelなど幅広い技術スタックで対応します。",
-  },
-  alternates: {
-    canonical: "/webdev",
-  },
-};
+export const metadata: Metadata = createPageMetadata("/webdev");
 
 export default function WebDev() {
   const serviceJsonLd = createServiceJsonLd({
@@ -49,36 +17,19 @@ export default function WebDev() {
     description:
       "フロントエンドからバックエンドまで一貫したWebサービス開発。React, Next.js, Vue.js, TypeScript, Go, Python, Rails, Laravelなど幅広い技術スタックで開発案件に対応します。",
     provider: "のっちまん (三宅 健太郎)",
-    url: "https://notchman.tech/webdev",
+    url: "https://www.notchman.tech/webdev",
     serviceType: "SoftwareDevelopmentService",
   });
 
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
-    { name: "Home", url: "https://notchman.tech" },
-    { name: "Web開発", url: "https://notchman.tech/webdev" },
+    { name: "Home", url: "https://www.notchman.tech" },
+    { name: "Web開発", url: "https://www.notchman.tech/webdev" },
   ]);
 
   return (
-    <div className={styles.container}>
-      <Script
-        id="service-jsonld"
-        type="application/ld+json"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd),
-        }}
-        strategy="afterInteractive"
-      />
-      <Script
-        id="breadcrumb-jsonld"
-        type="application/ld+json"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd),
-        }}
-        strategy="afterInteractive"
-      />
-      <Header />
+    <>
+      <StructuredData id="service-jsonld" data={serviceJsonLd} />
+      <StructuredData id="breadcrumb-jsonld" data={breadcrumbJsonLd} />
       <main className={styles.main}>
         <h1 className={styles.title}>Web開発</h1>
         <p className={styles.description}>
@@ -118,7 +69,7 @@ export default function WebDev() {
             {
               title: "Go / Python",
               desc:
-                "高パフォーマンスが求められるAPIサーバーはGoで、機械学習連携が必要な場合はPythonで開発します。" +
+                "高パフォーマンスが求められるAPIサーバーはGoで、機械学習・LLM連携が必要な場合はPython(FastAPI / Flask)で開発します。" +
                 "マイクロサービス構成でのAPI開発や、WebSocketを使用したリアルタイム通信の実装経験があります。" +
                 "配信基盤構築の経験もあります。",
             },
@@ -130,9 +81,9 @@ export default function WebDev() {
                 "Railsのバージョンアップや性能改善の実績があります。",
             },
             {
-              title: "Node.js / TypeScript",
+              title: "Node.js / TypeScript / Kotlin",
               desc:
-                "Express, NestJSなどを使用したNode.jsベースのAPIサーバー開発が可能です。" +
+                "Express, Hono, NestJSなどを使用したNode.jsベースのAPIサーバー開発が可能です。Java / Kotlin(Spring)での開発経験もあります。" +
                 "フロントエンドと同じTypeScriptで統一することで、型定義の共有や開発効率の向上を実現します。" +
                 "サーバーレスアーキテクチャでの開発経験もあります。",
             },
@@ -159,11 +110,9 @@ export default function WebDev() {
 
         <p className={styles.description}>
           Web開発の案件を承っております。お気軽に
-          <a href="/contact">お問い合わせ</a>ください。
+          <Link href="/contact">お問い合わせ</Link>ください。
         </p>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

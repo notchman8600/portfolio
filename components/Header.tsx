@@ -5,6 +5,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <HeaderItem name={"Home"} url={"/"} />
+      <HeaderItem name={"Career"} url={"/career"} />
       <HeaderItem name={"Works"} url={"/works"} />
       <HeaderItem name={"Contact"} url={"/contact"} />
     </header>

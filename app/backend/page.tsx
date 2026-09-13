@@ -1,41 +1,24 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { SkillCards } from "@/components/SkillCards";
+import { createPageMetadata } from "@/data/seo";
 import styles from "@/styles/Home.module.css";
 
-export const metadata: Metadata = {
-  title: "バックエンド開発 | のっちまん(notch_man)のポートフォリオ",
-  description:
-    "のっちまんのバックエンド開発スキル。Go, Python, PHP, Rubyを使ったAPIサーバーやWebサービスの開発・運用実績が豊富です。案件のご依頼を承っております。",
-  openGraph: {
-    title: "バックエンド開発 | のっちまん(notch_man)のポートフォリオ",
-    description:
-      "のっちまんのバックエンド開発スキル。Go, Python, PHP, Rubyを使ったAPIサーバーやWebサービスの開発・運用実績が豊富です。案件のご依頼を承っております。",
-    images: [
-      {
-        url: "https://notchman.tech/profile.jpg",
-        width: 1200,
-        height: 630,
-        alt: "のっちまんのバックエンド開発",
-      },
-    ],
-    type: "website",
-    url: "https://notchman.tech/backend",
-  },
-};
+export const metadata: Metadata = createPageMetadata("/backend");
 
 export default function BackendPage() {
   return (
-    <div className={styles.container}>
+    <>
       <BreadcrumbJsonLd
         items={[
-          { name: "ホーム", url: "https://notchman.tech" },
-          { name: "バックエンド開発", url: "https://notchman.tech/backend" },
+          { name: "ホーム", url: "https://www.notchman.tech" },
+          {
+            name: "バックエンド開発",
+            url: "https://www.notchman.tech/backend",
+          },
         ]}
       />
-      <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>バックエンドのスキル</h1>
 
@@ -69,8 +52,14 @@ export default function BackendPage() {
               title: "TypeScript",
               desc:
                 "主にフロントエンド開発で利用していますが、バックエンドでも独自の認証基盤サーバーの実装などで採用した経験があります。" +
-                "expressやNestJSを使ったAPIサーバーの構築を得意としています。",
+                "Express、Hono、NestJSを使ったAPIサーバーの構築を得意としています。",
               url: "",
+            },
+            {
+              title: "Java / Kotlin",
+              desc:
+                "株式会社ユーザーベースにてNewsPicksのトピックス機能の改善やレガシーコード改善をJava / Kotlinで担当しました。" +
+                "Spring Bootを用いたAPI開発の経験があります。",
             },
             {
               title: "Ruby",
@@ -81,11 +70,9 @@ export default function BackendPage() {
         ></SkillCards>
         <p className={styles.description}>
           バックエンド開発の案件を承っております。お気軽に
-          <a href="/contact">お問い合わせ</a>ください。
+          <Link href="/contact">お問い合わせ</Link>ください。
         </p>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

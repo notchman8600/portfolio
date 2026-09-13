@@ -23,8 +23,9 @@ export const createServiceJsonLd = ({
     description,
     provider: {
       "@type": "Person",
+      "@id": "https://www.notchman.tech/#person",
       name: provider,
-      url: "https://notchman.tech",
+      url: "https://www.notchman.tech",
     },
     url,
     serviceType: serviceType || "ProfessionalService",

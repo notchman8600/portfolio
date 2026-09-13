@@ -1,44 +1,15 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import Link from "next/link";
 import {
   createBreadcrumbJsonLd,
   createServiceJsonLd,
 } from "@/components/jsonLd";
 import { SkillCards } from "@/components/SkillCards";
+import { StructuredData } from "@/components/StructuredData";
+import { createPageMetadata } from "@/data/seo";
 import styles from "../../styles/Home.module.css";
 
-export const metadata: Metadata = {
-  title:
-    "技術研修・メンター・企業研修 | のっちまん(notch_man) | 新人研修・スキルアップ研修承ります",
-  description:
-    "大学でのenPiTメンターとして、PBL形式でのアジャイル開発教育を実施。企業向けの技術研修（新人研修・Git/GitHub研修・Docker研修・アジャイル開発研修）や若手エンジニアの育成支援を承っております。実践的なカリキュラムで即戦力を育成します。お気軽にお問い合わせください。",
-  keywords: [
-    "技術研修",
-    "企業研修",
-    "新人研修",
-    "エンジニア研修",
-    "Git研修",
-    "GitHub研修",
-    "Docker研修",
-    "アジャイル研修",
-    "スクラム研修",
-    "技術メンター",
-    "エンジニア育成",
-    "PBL教育",
-    "enPiT",
-  ],
-  openGraph: {
-    title:
-      "技術研修・メンター・企業研修 | のっちまん(notch_man) | 新人研修・スキルアップ研修承ります",
-    description:
-      "大学でのenPiTメンターとして、PBL形式でのアジャイル開発教育を実施。企業向けの技術研修や若手エンジニアの育成支援を承っております。",
-  },
-  alternates: {
-    canonical: "/training",
-  },
-};
+export const metadata: Metadata = createPageMetadata("/training");
 
 export default function Training() {
   const serviceJsonLd = createServiceJsonLd({
@@ -46,36 +17,19 @@ export default function Training() {
     description:
       "大学でのenPiTメンター経験を活かし、実践的な技術研修を提供。Git/GitHub研修、Docker研修、アジャイル開発研修など、企業のニーズに応じたカスタマイズ研修を実施します。",
     provider: "のっちまん (三宅 健太郎)",
-    url: "https://notchman.tech/training",
+    url: "https://www.notchman.tech/training",
     serviceType: "EducationalService",
   });
 
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
-    { name: "Home", url: "https://notchman.tech" },
-    { name: "技術研修・メンター", url: "https://notchman.tech/training" },
+    { name: "Home", url: "https://www.notchman.tech" },
+    { name: "技術研修・メンター", url: "https://www.notchman.tech/training" },
   ]);
 
   return (
-    <div className={styles.container}>
-      <Script
-        id="service-jsonld"
-        type="application/ld+json"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd),
-        }}
-        strategy="afterInteractive"
-      />
-      <Script
-        id="breadcrumb-jsonld"
-        type="application/ld+json"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd),
-        }}
-        strategy="afterInteractive"
-      />
-      <Header />
+    <>
+      <StructuredData id="service-jsonld" data={serviceJsonLd} />
+      <StructuredData id="breadcrumb-jsonld" data={breadcrumbJsonLd} />
       <main className={styles.main}>
         <h1 className={styles.title}>技術研修・メンター</h1>
         <p className={styles.description}>
@@ -140,9 +94,9 @@ export default function Training() {
         <SkillCards
           props={[
             {
-              title: "enPiTメンター（2022年〜）",
+              title: "enPiTメンター（2022年〜2026年3月）",
               desc:
-                "筑波大学でPBL形式のアジャイル開発教育のメンターを担当。" +
+                "筑波大学でPBL形式のアジャイル開発教育のメンターを4年間担当。" +
                 "累計50名以上の学生の成長をサポート。" +
                 "チーム開発の楽しさと難しさを体験的に学ぶ機会を提供しています。",
             },
@@ -165,11 +119,9 @@ export default function Training() {
 
         <p className={styles.description}>
           技術研修・メンタリングのご相談は
-          <a href="/contact">お問い合わせ</a>ください。
+          <Link href="/contact">お問い合わせ</Link>ください。
         </p>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

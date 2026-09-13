@@ -1,42 +1,15 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import Link from "next/link";
 import {
   createBreadcrumbJsonLd,
   createServiceJsonLd,
 } from "@/components/jsonLd";
 import { SkillCards } from "@/components/SkillCards";
+import { StructuredData } from "@/components/StructuredData";
+import { createPageMetadata } from "@/data/seo";
 import styles from "../../styles/Home.module.css";
 
-export const metadata: Metadata = {
-  title:
-    "技術コンサル・スクラム導入支援 | のっちまん(notch_man) | アジャイル開発・技術選定・アーキテクチャ設計",
-  description:
-    "認定スクラムマスター(CSM)として、アジャイル開発の導入・実践を支援します。開発プロセスの改善・技術選定・アーキテクチャ設計・開発体制構築・技術的負債解消まで、幅広い技術コンサルティングを提供します。ビジネスの成長を技術面から支援します。お気軽にお問い合わせください。",
-  keywords: [
-    "技術コンサル",
-    "スクラム導入",
-    "アジャイル開発",
-    "スクラムマスター",
-    "CSM",
-    "技術選定",
-    "アーキテクチャ設計",
-    "開発体制構築",
-    "プロセス改善",
-    "技術的負債",
-    "アジャイルコーチング",
-  ],
-  openGraph: {
-    title:
-      "技術コンサル・スクラム導入支援 | のっちまん(notch_man) | アジャイル開発・技術選定・アーキテクチャ設計",
-    description:
-      "認定スクラムマスター(CSM)として、アジャイル開発の導入・実践を支援します。開発プロセスの改善から技術選定まで、幅広いコンサルティングを提供します。",
-  },
-  alternates: {
-    canonical: "/consulting",
-  },
-};
+export const metadata: Metadata = createPageMetadata("/consulting");
 
 export default function Consulting() {
   const serviceJsonLd = createServiceJsonLd({
@@ -44,39 +17,22 @@ export default function Consulting() {
     description:
       "認定スクラムマスター(CSM)として、アジャイル開発の導入から実践まで支援。技術選定、アーキテクチャ設計、開発体制構築、技術的負債解消まで幅広くコンサルティングを提供します。",
     provider: "のっちまん (三宅 健太郎)",
-    url: "https://notchman.tech/consulting",
+    url: "https://www.notchman.tech/consulting",
     serviceType: "ConsultingService",
   });
 
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
-    { name: "Home", url: "https://notchman.tech" },
+    { name: "Home", url: "https://www.notchman.tech" },
     {
       name: "技術コンサル・スクラム導入支援",
-      url: "https://notchman.tech/consulting",
+      url: "https://www.notchman.tech/consulting",
     },
   ]);
 
   return (
-    <div className={styles.container}>
-      <Script
-        id="service-jsonld"
-        type="application/ld+json"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd),
-        }}
-        strategy="afterInteractive"
-      />
-      <Script
-        id="breadcrumb-jsonld"
-        type="application/ld+json"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON.stringify of a static, server-defined object (no user input)
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd),
-        }}
-        strategy="afterInteractive"
-      />
-      <Header />
+    <>
+      <StructuredData id="service-jsonld" data={serviceJsonLd} />
+      <StructuredData id="breadcrumb-jsonld" data={breadcrumbJsonLd} />
       <main className={styles.main}>
         <h1 className={styles.title}>技術コンサル・スクラム導入支援</h1>
         <p className={styles.description}>
@@ -159,11 +115,9 @@ export default function Consulting() {
 
         <p className={styles.description}>
           技術コンサルティング・スクラム導入のご相談は
-          <a href="/contact">お問い合わせ</a>ください。
+          <Link href="/contact">お問い合わせ</Link>ください。
         </p>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

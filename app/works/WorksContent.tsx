@@ -1,150 +1,196 @@
 import { styled } from "@linaria/react";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import Link from "next/link";
 import { OgpCardLocal } from "@/components/OgpCardLocal";
 import styles from "@/styles/Home.module.css";
+import workImage0 from "../../public/assets/works/project-3cb8f7e2be54f7083f99.jpg";
+import workImage2 from "../../public/assets/works/project-4f42624a1a4028f63363.jpg";
+import workImage1 from "../../public/assets/works/project-50a804868af6407eb504.jpg";
+import workImage4 from "../../public/assets/works/project-83e136f000385d10c09f.jpg";
+import workImage5 from "../../public/assets/works/project-c00sudq23akg008ogemg.jpg";
+import workImage3 from "../../public/assets/works/project-dd936bbcc01a5be88082.jpg";
 
 export default function WorksContent() {
   return (
-    <div className={styles.container}>
-      <Header />
-      <main className={styles.main}>
-        <h1 className={styles.title}>これまでの主な活動</h1>
+    <main className={styles.main}>
+      <h1 className={styles.title}>これまでの主な活動</h1>
 
-        <h2 className={styles.subtitle}>業務実績</h2>
-        <WorksGrid>
-          <WorkCard>
-            <h3>大規模SNSマーケティングサービスの開発</h3>
-            <p>
-              ストック素材販売サービスのWeb・モバイルアプリ開発を担当。 React
-              NativeによるiOS/Androidアプリ開発、Railsのレガシー改善、
-              認定スクラムマスターとしてスクラム導入を支援。
-              Railsバージョンアッププロジェクトの推進・実行も担当。
-            </p>
-          </WorkCard>
-          <WorkCard>
-            <h3>人事系サービスの新機能開発</h3>
-            <p>
-              人事系サービスの新機能開発・保守を担当。
-              Railsでフロントからバックエンドまで幅広く対応し、
-              システムの安定性向上と新機能の実装を両立。
-            </p>
-          </WorkCard>
-          <WorkCard>
-            <h3>レガシーシステムのモダナイゼーション</h3>
-            <p>
-              複数の企業でPHP/Laravelシステムのレガシー改善を実施。
-              Smartyのバージョンアップ、PHPバージョンアップなど、
-              技術的負債の解消とパフォーマンス改善を実現。
-            </p>
-          </WorkCard>
-        </WorksGrid>
+      <h2 className={styles.subtitle}>業務実績</h2>
+      <WorksGrid>
+        <WorkCard>
+          <h3>LLMを活用した業務支援ツールの開発</h3>
+          <p>
+            丸紅株式会社およびDigital Experts株式会社にて、
+            社内チャットボットや会議効率化・議事録作成支援ツールの開発を担当（2024年6月〜2026年3月）。
+            2026年4月からはLINEヤフー株式会社で機械学習エンジニアとして
+            生成AI・LLMを活用したシステム開発に取り組んでいます。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>NewsPicks トピックス機能の改善</h3>
+          <p>
+            株式会社ユーザーベースにて、NewsPicksのトピックス機能のUI改善と Java
+            / Kotlinによるレガシーコード改善を担当（2022年9月〜2025年3月）。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>大規模SNSマーケティングサービスの開発</h3>
+          <p>
+            ストック素材販売サービスのWeb・モバイルアプリ開発を担当。 React
+            NativeによるiOS/Androidアプリ開発、Railsのレガシー改善、
+            認定スクラムマスターとしてスクラム導入を支援。
+            Railsバージョンアッププロジェクトの推進・実行も担当。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>人事系サービスの新機能開発</h3>
+          <p>
+            人事系サービスの新機能開発・保守を担当。
+            Railsでフロントからバックエンドまで幅広く対応し、
+            システムの安定性向上と新機能の実装を両立。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>レガシーシステムのモダナイゼーション</h3>
+          <p>
+            複数の企業でPHP/Laravelシステムのレガシー改善を実施。
+            Smartyのバージョンアップ、PHPバージョンアップなど、
+            技術的負債の解消とパフォーマンス改善を実現。
+          </p>
+        </WorkCard>
+      </WorksGrid>
 
-        <h2 className={styles.subtitle}>研究実績</h2>
-        <WorksGrid>
-          <WorkCard>
-            <h3>WWW'24 国際学会発表（フルペーパー）</h3>
-            <p>
-              「NETEVOLVE: Social Network Forecasting using Multi-Agent
-              Reinforcement Learning with Interpretable Features」
-              強化学習を用いたソーシャルネットワークの将来予測手法について発表。
-              ACM The WebConferenceにてフルペーパー論文として採択。
-            </p>
-          </WorkCard>
-          <WorkCard>
-            <h3>DEIM2024 優秀論文賞・優秀インタラクティブ賞</h3>
-            <p>
-              「マルチエージェント強化学習に基づく解釈可能なソーシャルネットワークの将来予測」
-              国内最大級のデータベース学会でダブル受賞。
-              学部時代の卒業研究がベースとなった研究成果。
-            </p>
-          </WorkCard>
-          <WorkCard>
-            <h3>大学研究プロジェクト</h3>
-            <p>
-              筑波大学融合知能デザイン研究室にて、Crowd4Uの保守・開発、
-              NextCrowd4Uの新規開発を担当。マイクロタスク型クラウドソーシング
-              プラットフォームの研究開発に従事。
-            </p>
-          </WorkCard>
-        </WorksGrid>
+      <h2 className={styles.subtitle}>研究実績</h2>
+      <WorksGrid>
+        <WorkCard>
+          <h3>WWW'24 国際学会発表（フルペーパー）</h3>
+          <p>
+            「NETEVOLVE: Social Network Forecasting using Multi-Agent
+            Reinforcement Learning with Interpretable Features」
+            強化学習を用いたソーシャルネットワークの将来予測手法について発表。
+            ACM The WebConferenceにてフルペーパー論文として採択。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>DEIM2024 優秀論文賞・優秀インタラクティブ賞</h3>
+          <p>
+            「マルチエージェント強化学習に基づく解釈可能なソーシャルネットワークの将来予測」
+            国内最大級のデータベース学会でダブル受賞。
+            学部時代の卒業研究がベースとなった研究成果。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>大学研究プロジェクト</h3>
+          <p>
+            筑波大学融合知能デザイン研究室にて、Crowd4Uの保守・開発、
+            NextCrowd4Uの新規開発を担当（2022年4月〜2026年3月）。マイクロタスク型クラウドソーシング
+            プラットフォームの研究開発に従事。現在は博士後期課程として研究を継続しています。
+          </p>
+        </WorkCard>
+      </WorksGrid>
 
-        <h2 className={styles.subtitle}>受賞・採択実績</h2>
-        <WorksGrid>
-          <WorkCard>
-            <h3>未踏IT人材発掘・育成事業（2021年度）</h3>
-            <p>
-              会議の効率化支援ツールの開発で採択。
-              会議中の情報を構造化し、参加者の理解と合意形成を
-              支援するシステムを開発。
-            </p>
-          </WorkCard>
-          <WorkCard>
-            <h3>SecHack365 表現駆動コース修了（2021年度）</h3>
-            <p>
-              セキュリティ×表現をテーマに、独創的なプロダクトを開発。
-              1年間のハッキング技術習得プログラムを修了。
-            </p>
-          </WorkCard>
-          <WorkCard>
-            <h3>第30回全国高専プロコン 自由部門特別賞</h3>
-            <p>
-              影から3Dオブジェクトを生成し、それを破壊して遊ぶ
-              インタラクティブツールを開発。技術的な独創性が評価され受賞。
-            </p>
-          </WorkCard>
-        </WorksGrid>
+      <h2 className={styles.subtitle}>受賞・採択実績</h2>
+      <WorksGrid>
+        <WorkCard>
+          <h3>情報学学位プログラムリーダー賞（2026年3月）</h3>
+          <p>
+            筑波大学大学院 情報学学位プログラムにて、
+            顕著な業績による学生表彰を受けました。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>未踏IT人材発掘・育成事業（2021年度）</h3>
+          <p>
+            会議の効率化支援ツールの開発で採択。
+            会議中の情報を構造化し、参加者の理解と合意形成を
+            支援するシステムを開発。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>SecHack365 表現駆動コース修了（2021年度）</h3>
+          <p>
+            セキュリティ×表現をテーマに、独創的なプロダクトを開発。
+            1年間のハッキング技術習得プログラムを修了。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>第30回全国高専プロコン 自由部門特別賞</h3>
+          <p>
+            影から3Dオブジェクトを生成し、それを破壊して遊ぶ
+            インタラクティブツールを開発。技術的な独創性が評価され受賞。
+          </p>
+        </WorkCard>
+      </WorksGrid>
 
-        <h2 className={styles.subtitle}>これまでのハッカソンでの作品</h2>
+      <h2 className={styles.subtitle}>登壇実績</h2>
+      <WorksGrid>
+        <WorkCard>
+          <h3>アジャイルPBL祭り 2024</h3>
+          <p>
+            数年間プロダクト開発に関わった人がその意思を次に託すときの心構えについて発表。
+            未来にプロダクトを託すためのフレームワークを提案しました。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>Scrum Fest Sendai 2023</h3>
+          <p>
+            筑波大学と東京理科大学の合同チームが「1つのサービスの起案ができる」チームになるまでの軌跡と知見を発表。
+          </p>
+        </WorkCard>
+        <WorkCard>
+          <h3>アジャイルPBL祭り 2023</h3>
+          <p>
+            アジャイルそのものに固執するのではなく、開発において本当に向き合うべきものは何か、という問題提起を行いました。
+          </p>
+        </WorkCard>
+      </WorksGrid>
 
-        <GridBox>
-          <OgpCardLocal
-            url={"https://topaz.dev/projects/3cb8f7e2be54f7083f99"}
-            imageUrl={"/assets/works/project-3cb8f7e2be54f7083f99.jpg"}
-            title={"masakari exhibition"}
-            desc={
-              "ハッカソンの発表（進捗）をするために過去作品の展示会場を作った↓！"
-            }
-          />
-          <OgpCardLocal
-            url={"https://topaz.dev/projects/50a804868af6407eb504"}
-            imageUrl={"/assets/works/project-50a804868af6407eb504.jpg"}
-            title={"デスマTV"}
-            desc={"デスマTVで怖しのエンジニアのデスマーチを配信しよう！"}
-          />
-          <OgpCardLocal
-            url={"https://topaz.dev/projects/4f42624a1a4028f63363"}
-            imageUrl={"/assets/works/project-4f42624a1a4028f63363.jpg"}
-            title={"奇声を発してハッピーハッピー"}
-            desc={"奇声を発声してアプリの島田紳を下げよう。"}
-          />
-          <OgpCardLocal
-            url={"https://topaz.dev/projects/dd936bbcc01a5be88082"}
-            imageUrl={"/assets/works/project-dd936bbcc01a5be88082.jpg"}
-            title={"Cheese!"}
-            desc={"オンラインでも皆で集合写真！"}
-          />
-          <OgpCardLocal
-            url={"https://topaz.dev/projects/83e136f000385d10c09f"}
-            imageUrl={"/assets/works/project-83e136f000385d10c09f.jpg"}
-            title={"無職にメイドに夏を地だたかった"}
-            desc={"おかえりなさいませ！ご主人様、お嬢様♡"}
-          />
-          <OgpCardLocal
-            url={"https://topaz.dev/projects/c00sudq23akg008ogemg"}
-            imageUrl={"/assets/works/project-c00sudq23akg008ogemg.jpg"}
-            title={"Kubesmas tree"}
-            desc={"もうすぐクリスマス！みんなでクリスマス！"}
-          />
-        </GridBox>
-        <p className={styles.description}>
-          案件のご依頼を承っております。お気軽に
-          <a href="/contact">お問い合わせ</a>ください。
-        </p>
-      </main>
+      <h2 className={styles.subtitle}>これまでのハッカソンでの作品</h2>
 
-      <Footer />
-    </div>
+      <GridBox>
+        <OgpCardLocal
+          url={"https://topaz.dev/projects/3cb8f7e2be54f7083f99"}
+          imageUrl={workImage0}
+          title={"masakari exhibition"}
+          desc={
+            "ハッカソンの発表（進捗）をするために過去作品の展示会場を作った↓！"
+          }
+        />
+        <OgpCardLocal
+          url={"https://topaz.dev/projects/50a804868af6407eb504"}
+          imageUrl={workImage1}
+          title={"デスマTV"}
+          desc={"デスマTVで怖しのエンジニアのデスマーチを配信しよう！"}
+        />
+        <OgpCardLocal
+          url={"https://topaz.dev/projects/4f42624a1a4028f63363"}
+          imageUrl={workImage2}
+          title={"奇声を発してハッピーハッピー"}
+          desc={"奇声を発声してアプリの島田紳を下げよう。"}
+        />
+        <OgpCardLocal
+          url={"https://topaz.dev/projects/dd936bbcc01a5be88082"}
+          imageUrl={workImage3}
+          title={"Cheese!"}
+          desc={"オンラインでも皆で集合写真！"}
+        />
+        <OgpCardLocal
+          url={"https://topaz.dev/projects/83e136f000385d10c09f"}
+          imageUrl={workImage4}
+          title={"無職にメイドに夏を地だたかった"}
+          desc={"おかえりなさいませ！ご主人様、お嬢様♡"}
+        />
+        <OgpCardLocal
+          url={"https://topaz.dev/projects/c00sudq23akg008ogemg"}
+          imageUrl={workImage5}
+          title={"Kubesmas tree"}
+          desc={"もうすぐクリスマス！みんなでクリスマス！"}
+        />
+      </GridBox>
+      <p className={styles.description}>
+        案件のご依頼を承っております。お気軽に
+        <Link href="/contact">お問い合わせ</Link>ください。
+      </p>
+    </main>
   );
 }
 
@@ -152,6 +198,7 @@ const GridBox = styled.div`
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
